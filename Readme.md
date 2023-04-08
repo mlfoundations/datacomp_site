@@ -1,5 +1,5 @@
 # Datacomp website
-Made of 4 main files: \
+Made of 4 main files: 
 
 index.html (home page) \
 leaderboard.html \
