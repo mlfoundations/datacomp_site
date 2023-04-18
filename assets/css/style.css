@@ -24,6 +24,7 @@
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: .938rem;
+  /* --normal-font-size: .8rem; */
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
   /*========== Font weight ==========*/
@@ -41,11 +42,11 @@
 }
 @media screen and (min-width: 968px) {
   :root {
-    --biggest-font-size: 7rem;
+    --biggest-font-size: 4.5rem;
 		--second-biggest-font-size: 2rem;
     --h2-font-size: 1.75rem;
     --h3-font-size: 1.25rem;
-    --normal-font-size: 1.1rem;
+    --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
   }
@@ -309,14 +310,14 @@ img {
 
 
 .group__title {
-  font-size: 4rem;
+  font-size: 3rem;
   /* font-weight: var(--font-bold); */
   text-align: center;
   /* margin-bottom: var(--mb-0-75); */
 }
 
 .workshop__title {
-  font-size: 4rem;
+  font-size: 3rem;
   /* font-weight: var(--font-bold); */
   /* text-align: center; */
   /* margin-bottom: var(--mb-0-75); */
@@ -663,7 +664,7 @@ body.dark__theme {
     position: initial;
   }
   .home {
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 16rem;
 		grid-template-columns: repeat(1, 1fr);
   }
 
@@ -694,14 +695,14 @@ body.dark__theme {
 		}
         
     .track2 {
-          grid-template-columns: 1fr 3fr;
+          grid-template-columns: 1fr 4fr;
     		}
         
     /* .about {
     grid-template-columns:  3fr 2fr 1.25fr;
     }, */
 .security {
-      grid-template-columns: 3fr 2fr;
+      grid-template-columns: 2fr 1fr;
         }
 .app {grid-template-columns: repeat(6, 1fr);
     }
