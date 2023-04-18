@@ -571,6 +571,13 @@ body.dark__theme {
   .group__btns {
     grid-template-columns: max-content;
   }
+  
+  .group__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10rem;
+  }
+  
 }
 /* For medium devices */
 @media screen and (min-width: 576px) {
