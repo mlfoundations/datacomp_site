@@ -164,7 +164,7 @@
                 
 	            <p  class="security__desc" style="padding-bottom:0.7rem;">
        
-                  1) Participants can enter submissions for one or many different scales: small, medium, large, or xlarge, which in this track also represents the raw number of image-text pairs in a CommonPool submission. 
+                  1) Participants can enter submissions for one or many different scales: small, medium, large or xlarge, which represent the raw number of image-text pairs in a CommonPool that should be filtered.
                   
                   </p>
                   
@@ -178,15 +178,15 @@
 	            </p>
                 
                 <p  class="security__desc" style="padding-bottom:0.7rem;">
-                4) Participants are not allowed to modify the training procedure. Hence, changing hyperparameters, model architecture, optimizer, compute budget, or number of training steps is not allowed. Changing any other training details is also not allowed
+                4) Participants are not allowed to modify the training procedure. Hence, changing hyperparameters, model architecture, optimizer, compute budget, or number of training steps is not allowed. Changing any other training details is also not allowed.
               </p>
               
               <p  class="security__desc" style="padding-bottom:0.7rem;">
-              5) Participants are required to submit and open-source both the list of uids and the code used to generate this list.
+              5) Participants are strongly encouraged to submit and open-source both the list of uids and the code used to generate this list; however, this is not required.
             </p>
             
             <p  class="security__desc" style="padding-bottom:0.7rem;">
-            6) To avoid overfitting to the evaluation tasks, we do not permit running any code or sequence of computation that depends on the evaluation task images (train, validation, or test). We make the following exceptions: (1) Images in ImageNet train may be used freely (e.g., for pool filtering and hyperparameter tuning). (2) Code to visualize images in the downstream tasks is allowed.
+            6) To avoid overfitting to the evaluation tasks, we do not permit running any code or algorithmic dependence on the evaluation images. However, use of other images associated with these tasks (e.g., supervised training sets) is permitted.
           </p>
           
           <p  class="security__desc" style="padding-bottom:0.7rem;">
@@ -219,7 +219,7 @@
                   
   	            <p  class="security__desc" style="padding-bottom:0.7rem;">
          
-                    1) Data from evaluation or test sets is not permitted, however, using training data from evaluation tasks is allowed.  
+                    1) Participants are allowed to augment CommonPool data with existing datasets, so long as these data sources do not contain evaluation images. Participants can use data from any CommonPool; however, they are not required to do so.
                     
                     </p>
                     
@@ -229,12 +229,9 @@
                     </p>
                     
                     <p  class="security__desc" style="padding-bottom:0.7rem;">
-                    3) Assembling one's own dataset is allowed. However, we require releasing either the image urls or the images themselves in addition to the text for each image. We additionally require rigorous documentation of face-blurring and safety checks. We reserve the right to run our own safety code on participant provided data and disqualify entries that do not meet adequate safety standards.
+                    3) Assembling one’s own dataset is allowed; however, evaluation images can neither be contained nor otherwise used to construct said dataset. We encourage releasing the image urls or the images themselves in addition to the text for each image. We also encourage rigorous documentation of face-blurring and other data safety checks. We reserve the right to run our own safety code on participant provided data and disqualify entries that do not meet adequate safety standards.
   	            </p>
                   
-                  <p  class="security__desc" style="padding-bottom:6rem;">
-                  4) Participants can use data from the CommonPool track; however, they are not required to do so.
-                </p>
                 
                   
   							</div>
