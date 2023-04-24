@@ -695,7 +695,7 @@ body.dark__theme {
 		}
         
     .track2 {
-          grid-template-columns: 1fr 4fr;
+          grid-template-columns: 1fr 3fr;
     		}
         
     /* .about {
