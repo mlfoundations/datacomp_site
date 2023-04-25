@@ -91,8 +91,9 @@ h4:hover {
 
 
 ul {
-  list-style: none;
-}
+  list-style-type: disc;
+  padding-left: 50px !important;
+  }
 
 a {
   text-decoration: none;
@@ -177,6 +178,12 @@ img {
   display: grid;
   gap: 1.5rem;
 }
+
+.grid-small-pad {
+  display: grid;
+  gap: 1.0rem !important;
+}
+
 
 .btn {
   display: inline-block;
