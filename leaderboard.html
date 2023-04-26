@@ -344,6 +344,8 @@
 }
 
 function populateTable(data, tableBody) {
+    const columnIndexForScientificNotation = 3; // Change this to the desired column index
+
     data.forEach((rowData, rowIndex) => {
         const row = document.createElement('tr');
 
@@ -352,15 +354,42 @@ function populateTable(data, tableBody) {
         rowNumberCell.textContent = rowIndex + 1;
         row.appendChild(rowNumberCell);
 
-        rowData.forEach(cellData => {
+        rowData.forEach((cellData, cellIndex) => {
             const cell = document.createElement('td');
-            cell.textContent = cellData;
+
+            // Format the cell data for the specified column index
+            if (cellIndex === columnIndexForScientificNotation) {
+                const number = parseFloat(cellData);
+                cell.textContent = isNaN(number) ? cellData : number.toExponential(2);
+            } else {
+                cell.textContent = cellData;
+            }
+
             row.appendChild(cell);
         });
 
         tableBody.appendChild(row);
     });
 }
+
+// function populateTable(data, tableBody) {
+//     data.forEach((rowData, rowIndex) => {
+//         const row = document.createElement('tr');
+
+//         // Add row number at the beginning of each row
+//         const rowNumberCell = document.createElement('td');
+//         rowNumberCell.textContent = rowIndex + 1;
+//         row.appendChild(rowNumberCell);
+
+//         rowData.forEach(cellData => {
+//             const cell = document.createElement('td');
+//             cell.textContent = cellData;
+//             row.appendChild(cell);
+//         });
+
+//         tableBody.appendChild(row);
+//     });
+// }
          
         //  function csv_string_to_table(csv_string, element_to_insert_table) {
         //     var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
