@@ -19,7 +19,62 @@
     />
     <!-- StyleSheets -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-
+    <style>
+      table .selector{
+        border-collapse: collapse;
+        width: 100%;
+        margin: 50px auto;
+        table-layout: fixed;
+        text-align: center !important;
+      }
+      .td-select{
+        text-align: center;
+        padding: 20px;
+        background-color: #dddddd;
+        text-align: center;
+      }
+      .highlighted {
+        background-color: #8756D7;
+        color: white;
+      }
+    </style>
+    <script>
+      function highlightCell(event) {
+        const cell = event.target;
+        cell.classList.add('highlighted');
+      }
+    
+      function unhighlightOtherCells(clickedCell) {
+        const cells = document.querySelectorAll('td');
+        cells.forEach(cell => {
+          if (cell !== clickedCell) {
+            cell.classList.remove('highlighted');
+          }
+        });
+      }
+    
+      function handleClick(event) {
+        const cell = event.target;
+        cell.classList.add('highlighted');
+        unhighlightOtherCells(cell);
+      }
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        const cells = document.querySelectorAll('td');
+        cells.forEach(cell => {
+          cell.addEventListener('mouseover', highlightCell);
+          cell.addEventListener('mouseout', event => {
+            if (!event.target.classList.contains('clicked')) {
+              event.target.classList.remove('highlighted');
+            }
+          });
+          cell.addEventListener('click', event => {
+            cell.classList.toggle('clicked');
+            handleClick(event);
+          });
+        });
+      });
+    </script>
   </head>
   <body>
 
@@ -62,11 +117,19 @@
     <!-- Header Part End -->
     <!-- Header Part End -->
 
-
-
     <!-- Main content body start  -->
     <main class="main">
       <!-- Home  -->
+
+      <div class="container" id="first">
+        <table class="selector">
+          <tr>
+            <td class="td-select highlighted clicked" width="50%">Filtering track</td>
+            <td clss="td-select" width="50%">BYOD track</td>
+          </tr>
+        </table>
+    </div>
+    </div>
       
       
       <div class="container" id="first">

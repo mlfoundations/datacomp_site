@@ -131,6 +131,10 @@ img {
   justify-self: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /*=============== Table ===============*/
 .styled-table {
     border-collapse: collapse;
