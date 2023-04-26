@@ -656,7 +656,8 @@ body.dark__theme {
    
   .section.container {
     margin: auto;
-    padding: 1rem var(--mb-1-5) 2rem var(--mb-1-5);
+    padding: 6rem var(--mb-1-5) 2rem var(--mb-1-5);
+    margin-top: -5rem !important;
   }
   .container {
     margin: auto;
