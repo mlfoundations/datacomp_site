@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 DataComp baseline: No filtering,0.431,0.459,1280000000,4-26-2023
 DataComp baseline: Basic filtering,0.451,0.515,298000000,4-26-2023
 DataComp baseline: CLIP score (L/14 30%),0.523,0.578,384000000,4-26-2023
 DataComp baseline: Image-based,0.474,0.572,293000000,4-26-2023
 DataComp baseline: Text-based,0.469,0.560,317000000,4-26-2023
 DataComp baseline: LAION-2B filtering,0.494,0.553,130000000,4-26-2023
+=======
+---,---,---,---,---,---
+---,---,---,---,---,---
+---,---,---,---,---,---
+---,---,---,---,---,---
+---,---,---,---,---,---
+>>>>>>> 6f994ee7e97e8682d15b8839a5925565f071b4af
