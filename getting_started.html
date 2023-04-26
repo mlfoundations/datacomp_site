@@ -118,22 +118,25 @@
             Once the download finishes, the data will be available at <code>$data_dir/shards</code>.
             We offer options for selecting subsets of the downloaded pool <a href="https://github.com/mlfoundations/datacomp/blob/master/README.md#selecting-samples-in-the-filtering-track" target="_blank">here</a>.
         </p>
+        <br>
 
         <h3>Training</h3>
         <p style="clear: left;">
             To train, run the following command:
         </p>
+        
 
         <pre><code class="hljs language-bash">torchrun --nproc_per_node $num_gpus train.py --scale $scale --data_dir $data_dir --output_dir $output_dir --exp_name $exp_name</code></pre>
 
+        <br>
         <h3>Evaluating</h3>
 
         <p style="clear: left;">
             To evaluate, run the following command:
         </p>
 
-        <pre><code class="hljs language-bash">python evaluate.py  --train_output_dir $train_output_dir/$exp_name
-        </code></pre>
+        <pre><code class="hljs language-bash">python evaluate.py  --train_output_dir $train_output_dir/$exp_name</code></pre>
+        <br>
     
         <h3>Submitting</h3>
         <p style="clear: left; padding-bottom:10rem">
