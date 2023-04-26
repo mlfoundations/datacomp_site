@@ -308,7 +308,7 @@ img {
 }
 
 .home {
-  row-gap: 0.3rem;
+  row-gap: 0rem;
   /* padding-bottom: 17rem; */
   /* margin-top: var(--mb-0-75); */
   /* padding-top: 1rem; */
@@ -656,7 +656,7 @@ body.dark__theme {
    
   .section.container {
     margin: auto;
-    padding: 6rem var(--mb-1-5) 2rem var(--mb-1-5);
+    padding: 1rem var(--mb-1-5) 2rem var(--mb-1-5);
   }
   .container {
     margin: auto;
@@ -676,7 +676,7 @@ body.dark__theme {
     position: initial;
   }
   .home {
-    padding: 4rem 0 16rem;
+    padding: 0rem 0 10rem;
 		grid-template-columns: repeat(1, 1fr);
   }
 
