@@ -22,9 +22,9 @@ const scrollActive = () => {
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 20,
+      sectionTop = current.offsetTop - 10,
       sectionId = current.getAttribute("id");
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight * 0.9) {
       navMenu
         .querySelector("a[href*=" + sectionId + "]")
         .classList.add("active__link");
