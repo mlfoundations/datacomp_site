@@ -45,7 +45,8 @@
       }
     
       function unhighlightOtherCells(clickedCell) {
-        const cells = document.querySelectorAll('td');
+        const parentTable = clickedCell.closest("table");
+        const cells = parentTable.querySelectorAll('td');
         cells.forEach(cell => {
           if (cell !== clickedCell) {
             cell.classList.remove('highlighted');
@@ -122,10 +123,18 @@
       <!-- Home  -->
 
       <div class="container" id="first">
-        <table class="selector">
+        <table id="track-tb" class="selector">
           <tr>
             <td class="td-select highlighted clicked" width="50%">Filtering track</td>
-            <td clss="td-select" width="50%">BYOD track</td>
+            <td class="td-select" width="50%">BYOD track</td>
+          </tr>
+        </table>
+        <table if="scale-tb" class="selector">
+          <tr>
+            <td class="td-select" width="25%">small</td>
+            <td class="td-select" width="25%">medium</td>
+            <td class="td-select" width="25%">large</td>
+            <td class="td-select highlighted clicked" width="25%">xlarge</td>
           </tr>
         </table>
     </div>
