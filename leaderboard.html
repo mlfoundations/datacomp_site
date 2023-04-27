@@ -26,9 +26,13 @@
       table .selector{
         border-collapse: collapse;
         width: 100%;
-        margin: 50px auto;
+        display: block;
         table-layout: fixed;
+        font-size: 1000px;
         text-align: center !important;
+      }
+      .select-tr {
+        width: 100%;
       }
       .td-select{
         text-align: center;
@@ -147,7 +151,7 @@
         <div class="ham__btn">
           <i class="bx bx-grid-alt"></i>
         </div>
-        <a href="./leaderboard.html#first" class="btn btn__header">Leaderboard</a>
+        <a href="./leaderboard.html" class="btn btn__header">Leaderboard</a>
       </nav>
     </header>
     <!-- Header Part End -->
@@ -156,27 +160,30 @@
     <main class="main">
       <!-- Home  -->
 
-      <div class="container" id="first">
-        <table id="track-tb" class="selector">
-          <tr>
-            <td id="filter-track" class="td-select track highlighted clicked" width="50%">Filtering track</td>
-            <td id="byod-track" class="td-select track" width="50%">BYOD track</td>
+      <div class="container" id="first" style="margin-top:5rem !important;">
+
+      <h4 class="leader__title"> Select the track and scale </h4>
+      <br>
+        <table id="track-tb" class="selector" style="width: 100%;">
+          <tr class="select-tr">
+            <td id="filter-track" style="width: 50%;" class="td-select track highlighted clicked">Filtering track</td>
+            <td id="byod-track" style="width: 50%;" class="td-select track">BYOD track</td>
           </tr>
         </table>
-        <table if="scale-tb" class="selector">
-          <tr>
-            <td id="small-scale" class="td-select scale" width="25%">small</td>
-            <td id="medium-scale" class="td-select scale" width="25%">medium</td>
-            <td id="large-scale" class="td-select scale" width="25%">large</td>
-            <td id="xlarge-scale" class="td-select scale highlighted clicked" width="25%">xlarge</td>
+        <table id="scale-tb" class="selector" style="width: 100%;">
+          <tr  class="select-tr">
+            <td id="small-scale" style="width: 25%;"  class="td-select scale">small</td>
+            <td id="medium-scale" style="width: 25%;"  class="td-select scale">medium</td>
+            <td id="large-scale" style="width: 25%;"   class="td-select scale">large</td>
+            <td id="xlarge-scale" style="width: 25%;"  class="td-select scale highlighted clicked">xlarge</td>
           </tr>
         </table>
     </div>
     </div>
       
 
-		<div class="container leaderboard-tb" id="filter-track--xlarge-scale-container" style="padding-top:5rem;">
-       <h4 class="leader__title"> Filtering track, xlarge scale </h4>
+		<div class="container leaderboard-tb" id="filter-track--xlarge-scale-container" style="padding-top:2rem;">
+       <h4 class="leader__title"> Leaderboard </h4>
        <br>
          <table class="styled-table" id="filter-track--xlarge-scale-tb">
 			 <thead style="background-color:#69C39E;">
@@ -193,8 +200,8 @@
 		 </table>
 		 </div>
          
-    <div class="container leaderboard-tb hidden" id="filter-track--large-scale-container" style="padding-top:5rem;">
- 		 <h4 class="leader__title"> Filtering track, large scale </h4>
+    <div class="container leaderboard-tb hidden" id="filter-track--large-scale-container" style="padding-top:2rem;">
+ 		 <h4 class="leader__title"> Leaderboard </h4>
       <br>
           <table class="styled-table" id="filter-track--large-scale-tb">
  			 <thead style="background-color:#EB725F;">
@@ -211,8 +218,8 @@
  		 </table>
  		 </div>
          
-    <div class="container leaderboard-tb hidden" id="filter-track--medium-scale-container" style="padding-top:5rem;">
- 		 <h4 class="leader__title"> Filtering track, medium scale </h4>
+    <div class="container leaderboard-tb hidden" id="filter-track--medium-scale-container" style="padding-top:2rem;">
+ 		 <h4 class="leader__title"> Leaderboard</h4>
       <br>
           <table class="styled-table" id="filter-track--medium-scale-tb">
  			 <thead style="background-color:#5594F5;">
@@ -229,8 +236,8 @@
  		 </table>
  		 </div>
          
-    <div class="container leaderboard-tb hidden" id="filter-track--small-scale-container" style="padding-top:5rem;">
- 		 <h4 class="leader__title"> Filtering track, small scale </h4>
+    <div class="container leaderboard-tb hidden" id="filter-track--small-scale-container" style="padding-top:2rem;">
+ 		 <h4 class="leader__title"> Leaderboard </h4>
       <br>
           <table class="styled-table" id="filter-track--small-scale-tb">
  			 <thead style="background-color:#EAB14B;">
@@ -247,8 +254,8 @@
  		 </table>
  		 </div>
          
-   		<div class="container leaderboard-tb hidden" id="byod-track--xlarge-scale-container" style="padding-top:5rem;">
-   		<h4 class="leader__title"> BYOD track, xlarge scale </h4>
+   		<div class="container leaderboard-tb hidden" id="byod-track--xlarge-scale-container" style="padding-top:2rem;">
+   		<h4 class="leader__title"> Leaderboard </h4>
        <br>
             <table class="styled-table" id="byod-track--xlarge-scale-tb">
    			 <thead style="background-color:#69C39E;">
@@ -265,8 +272,8 @@
    		 </table>
    		 </div>
             
-        <div class="container leaderboard-tb hidden" id="byod-track--large-scale-container" style="padding-top:5rem;">
-    		<h4 class="leader__title"> BYOD track, large scale </h4><br>
+        <div class="container leaderboard-tb hidden" id="byod-track--large-scale-container" style="padding-top:2rem;">
+    		<h4 class="leader__title">Leaderboard </h4><br>
              <table class="styled-table" id="byod-track--large-scale-tb">
     			 <thead style="background-color:#EB725F;">
             <th>Rank</th> 
@@ -282,8 +289,8 @@
     		 </table>
     		 </div>
             
-        <div class="container leaderboard-tb hidden" id="byod-track--medium-scale-container" style="padding-top:5rem;">
-    		 <h4 class="leader__title"> BYOD track, medium scale </h4>
+        <div class="container leaderboard-tb hidden" id="byod-track--medium-scale-container" style="padding-top:2rem;">
+    		 <h4 class="leader__title"> Leaderboard </h4>
          <br>
              <table class="styled-table" id="byod-track--medium-scale-tb">
     			 <thead style="background-color:#5594F5;">
@@ -300,8 +307,8 @@
     		 </table>
     		 </div>
             
-        <div class="container leaderboard-tb hidden" id="byod-track--small-scale-container" style="padding-top:5rem;">
-    		 <h4 class="leader__title"> BYOD track, small scale </h4>
+        <div class="container leaderboard-tb hidden" id="byod-track--small-scale-container" style="padding-top:2rem;">
+    		 <h4 class="leader__title">Leaderboard</h4>
          <br>
              <table class="styled-table" id="byod-track--small-scale-tb">
     			 <thead style="background-color:#EAB14B;">
@@ -344,11 +351,9 @@
               })
               .then(function(data){
                 var table_id = track + '-track--' + scale + '-scale-tb';
-                console.log(table_id)
                 var table_container = document.getElementById(table_id);
                 csv_string_to_table(data, table_container);
                 var table_id_for_datatable = '#' + table_id;
-                console.log(table_id_for_datatable)
                 let table = new DataTable(table_id_for_datatable, {
                   scrollX: true,
                   searching: false,
