@@ -375,7 +375,7 @@
           const data = rows.map(row => row.split(',')).filter(row => row.length > 1); // Filter out empty rows
 
           // Sort the data array based on a particular value (column)
-          const columnIndexToSortBy = 3; // Change this to the desired column index
+          const columnIndexToSortBy = 4; // Change this to the desired column index
           data.sort((a, b) => {
               if (a[columnIndexToSortBy] === undefined || b[columnIndexToSortBy] === undefined) {
                   return 0;
