@@ -54,11 +54,28 @@
           }
         });
       }
+
+      function clearTables() {
+        const track = document.querySelector('.td-select.clicked.track').id;
+        const scale = document.querySelector('.td-select.clicked.scale').id;
+        const table_id = track + '--' + scale + '-container';
+
+        const tables = document.querySelectorAll('.leaderboard-tb');
+        // Iterate through tables 
+        tables.forEach(table => {
+          if (table.id !== table_id) {
+            table.classList.add('hidden');
+          } else {
+            table.classList.remove('hidden');
+          }
+        });
+      }
     
       function handleClick(event) {
         const cell = event.target;
         cell.classList.add('highlighted');
         unhighlightOtherCells(cell);
+        clearTables();
       }
     
       document.addEventListener('DOMContentLoaded', () => {
@@ -71,7 +88,7 @@
             }
           });
           cell.addEventListener('click', event => {
-            cell.classList.toggle('clicked');
+            cell.classList.add('clicked');
             handleClick(event);
           });
         });
@@ -126,33 +143,25 @@
       <div class="container" id="first">
         <table id="track-tb" class="selector">
           <tr>
-            <td class="td-select highlighted clicked" width="50%">Filtering track</td>
-            <td class="td-select" width="50%">BYOD track</td>
+            <td id="filter-track" class="td-select track highlighted clicked" width="50%">Filtering track</td>
+            <td id="byod-track" class="td-select track" width="50%">BYOD track</td>
           </tr>
         </table>
         <table if="scale-tb" class="selector">
           <tr>
-            <td class="td-select" width="25%">small</td>
-            <td class="td-select" width="25%">medium</td>
-            <td class="td-select" width="25%">large</td>
-            <td class="td-select highlighted clicked" width="25%">xlarge</td>
+            <td id="small-scale" class="td-select scale" width="25%">small</td>
+            <td id="medium-scale" class="td-select scale" width="25%">medium</td>
+            <td id="large-scale" class="td-select scale" width="25%">large</td>
+            <td id="xlarge-scale" class="td-select scale highlighted clicked" width="25%">xlarge</td>
           </tr>
         </table>
     </div>
     </div>
       
-      
-      <div class="container" id="first">
-        <div class="group grid">
-            <div class="app__data">
-            <h1 class="group__title" align="center" style="padding-top:5rem;"> Track 1: Filtering  </h1>
-        </div>
-        </div>
-    </div>
 
-		<div class="container" id="leaderboard1" style="padding-top:5rem;">
-            <a href="./leaderboard.html#leaderboard1"> <h4 class="leader__title"> XLarge - Filtering </h4> </a>
-         <table class="styled-table" id="table1">
+		<div class="container leaderboard-tb" id="filter-track--xlarge-scale-container" style="padding-top:5rem;">
+       <h4 class="leader__title"> Filtering track, xlarge scale </h4>
+         <table class="styled-table" id="filter-track--xlarge-scale-tb">
 			 <thead style="background-color:#69C39E;">
         <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -162,14 +171,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
 			 </thead>
-			 <tbody id='tbody1'>
+			 <tbody id='filter-track--xlarge-scale-tbody'>
 			 </body>
 		 </table>
 		 </div>
          
-         <div class="container" id="leaderboard2" style="padding-top:5rem;">
- 		 <a href="./leaderboard.html#leaderboard2"> <h4 class="leader__title"> Large - Filtering </h4> </a>
-          <table class="styled-table" id="table2">
+    <div class="container leaderboard-tb hidden" id="filter-track--large-scale-container" style="padding-top:5rem;">
+ 		 <h4 class="leader__title"> Filtering track, large scale </h4>
+          <table class="styled-table" id="filter-track--large-scale-tb">
  			 <thead style="background-color:#EB725F;">
         <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -179,14 +188,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
  			 </thead>
- 			 <tbody id='tbody2'>
+ 			 <tbody id='filter-track--large-scale-tbody'>
  			 </body>
  		 </table>
  		 </div>
          
-         <div class="container" id="leaderboard3" style="padding-top:5rem;">
- 		 <a href="./leaderboard.html#leaderboard3"> <h4 class="leader__title"> Medium - Filtering </h4> </a>
-          <table class="styled-table" id="table3">
+    <div class="container leaderboard-tb hidden" id="filter-track--medium-scale-container" style="padding-top:5rem;">
+ 		 <h4 class="leader__title"> Filtering track, medium scale </h4>
+          <table class="styled-table" id="filter-track--medium-scale-tb">
  			 <thead style="background-color:#5594F5;">
         <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -196,14 +205,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
  			 </thead>
- 			 <tbody id='tbody3'>
+ 			 <tbody id='filter-track--medium-scale-tbody'>
  			 </body>
  		 </table>
  		 </div>
          
-         <div class="container" id="leaderboard4" style="padding-top:5rem;">
- 		 <a href="./leaderboard.html#leaderboard4"> <h4 class="leader__title"> Small - Filtering </h4> </a>
-          <table class="styled-table" id="table4">
+    <div class="container leaderboard-tb hidden" id="filter-track--small-scale-container" style="padding-top:5rem;">
+ 		 <h4 class="leader__title"> Filtering track, small scale </h4>
+          <table class="styled-table" id="filter-track--small-scale-tb">
  			 <thead style="background-color:#EAB14B;">
         <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -213,25 +222,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
  			 </thead>
- 			 <tbody id='tbody4'>
+ 			 <tbody id='filter-track--small-scale-tbody'>
  			 </body>
  		 </table>
  		 </div>
          
-         <div class="container" id="leaderboard">
- 		 </div>
-         
-         <div class="container" id="group">
-           <div class="group grid">
-               <div class="app__data">
-               <h1 class="group__title" align="center"> Track 2: Bring Your Own Data </h1>
-           </div>
-           </div>
-       </div>
-
-   		<div class="container" id="leaderboard5" style="padding-top:5rem;">
-   		 <a href="./leaderboard.html#leaderboard5"> <h4 class="leader__title"> XLarge - BYOD </h4> </a>
-            <table class="styled-table" id="table5">
+   		<div class="container leaderboard-tb hidden" id="byod-track--xlarge-scale-container" style="padding-top:5rem;">
+   		<h4 class="leader__title"> BYOD track, xlarge scale </h4>
+            <table class="styled-table" id="filter-byod--xlarge-scale-tb">
    			 <thead style="background-color:#69C39E;">
           <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -241,14 +239,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
    			 </thead>
-   			 <tbody id='tbody5'>
+   			 <tbody id='byod-track--xlarge-scale-tbody'>
    			 </body>
    		 </table>
    		 </div>
             
-            <div class="container" id="leaderboard6" style="padding-top:5rem;">
-    		 <a href="./leaderboard.html#leaderboard6"> <h4 class="leader__title"> Large - BYOD </h4> </a>
-             <table class="styled-table" id="table6">
+        <div class="container leaderboard-tb hidden" id="byod-track--large-scale-container" style="padding-top:5rem;">
+    		<h4 class="leader__title"> BYOD track, large scale </h4>
+             <table class="styled-table" id="filter-byod--large-scale-tb">
     			 <thead style="background-color:#EB725F;">
             <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -258,14 +256,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
     			 </thead>
-    			 <tbody id='tbody6'>
+    			 <tbody id='byod-track--large-scale-tbody'>
     			 </body>
     		 </table>
     		 </div>
             
-            <div class="container" id="leaderboard7" style="padding-top:5rem;">
-    		 <a href="./leaderboard.html#leaderboard7"> <h4 class="leader__title"> Medium - BYOD </h4> </a>
-             <table class="styled-table" id="table7">
+        <div class="container leaderboard-tb hidden" id="byod-track--medium-scale-container" style="padding-top:5rem;">
+    		 <h4 class="leader__title"> BYOD track, medium scale </h4>
+             <table class="styled-table" id="filter-byod--medium-scale-tb">
     			 <thead style="background-color:#5594F5;">
             <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -275,14 +273,14 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
     			 </thead>
-    			 <tbody id='tbody7'>
+    			 <tbody id='byod-track--medium-scale-tbody'>
     			 </body>
     		 </table>
     		 </div>
             
-            <div class="container" id="leaderboard8" style="padding-top:5rem;">
-    		 <a href="./leaderboard.html#leaderboard8"> <h4 class="leader__title"> Small - BYOD </h4> </a>
-             <table class="styled-table" id="table8">
+        <div class="container leaderboard-tb hidden" id="byod-track--small-scale-container" style="padding-top:5rem;">
+    		 <h4 class="leader__title"> BYOD track, small scale </h4>
+             <table class="styled-table" id="filter-byod--small-scale-tb">
     			 <thead style="background-color:#EAB14B;">
             <th width='3%'></th>
         <th width='50%'>Team</th>
@@ -292,106 +290,88 @@
        <!-- <th>Checkpoint</th> -->
        <th>Date</th>
     			 </thead>
-    			 <tbody id='tbody8'>
+    			 <tbody id='byod-track--small-scale-tbody'>
     			 </body>
     		 </table>
     		 </div>
          
-         <div class="container" id="leaderboard">
- 		 </div>
          
-         <div class="container" id="leaderboard">
- 		 </div>
-         
-         
+         <br>
+         <br>
+         <br>
          <script>
 
-            // fetchAndPopulateTable('tbody1', 'https://www.xlarge_1.ai/data/xlarge_2.csv');
-
-            // fetch('http://localhost:8000/data/xlarge_1.csv')
-            //   .then(function(response) {
-            //       return response.text();
-            //   })
-            //   .then(function(data) {
-            //       // Pass the table ID instead of the table element
-            //       processData(data, 'table1'); // Replace 'dataTable' with the correct table ID
-            //   });
-
-              fetch('https://www.datacomp.ai/data/xlarge_1.csv')
+              fetch('data/filter_xlarge.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody1');
+                    var table_container = document.getElementById('filter-track--xlarge-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
          
-                fetch('https://www.datacomp.ai/data/large_1.csv')
+                fetch('data/filter_large.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody2');
+                    var table_container = document.getElementById('filter-track--large-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
 
-                fetch('https://www.datacomp.ai/data/medium_1.csv')
+                fetch('data/filter_medium.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody3');
+                    var table_container = document.getElementById('filter-track--medium-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
          
-                fetch('https://www.datacomp.ai/data/small_1.csv')
+                fetch('data/filter_small.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody4');
+                    var table_container = document.getElementById('filter-track--small-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
 
-                fetch('https://www.datacomp.ai/data/xlarge_2.csv')
+                fetch('data/byod_xlarge.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody5');
+                    var table_container = document.getElementById('byod-track--xlarge-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
          
-                fetch('https://www.datacomp.ai/data/large_2.csv')
+                fetch('data/byod_large.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody6');
+                    var table_container = document.getElementById('byod-track--large-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
 
-                fetch('https://www.datacomp.ai/data/medium_1.csv')
+                fetch('data/byod_medium.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody7');
+                    var table_container = document.getElementById('byod-track--medium-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
          
-                fetch('https://www.datacomp.ai/data/small_1.csv')
+                fetch('data/byod_small.csv')
                 .then(function(response){
                     return response.text();
                 })
                 .then(function(data){
-                    var table_container = document.getElementById('tbody8');
+                    var table_container = document.getElementById('byod-track--small-scale-tbody');
                     csv_string_to_table(data, table_container);
                 });
-            
-            
-           
-        
 
         function csv_string_to_table(csvData, tableBody) {
             const table = tableBody.parentElement;
