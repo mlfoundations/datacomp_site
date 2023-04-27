@@ -45,7 +45,7 @@
     --biggest-font-size: 4.5rem;
 		--second-biggest-font-size: 2rem;
     --h2-font-size: 1.75rem;
-    --h3-font-size: 1.25rem;
+    --h3-font-size: 1.4rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
@@ -349,7 +349,13 @@ img {
 
 .home__desc {
   margin-bottom: var(--mb-2);
-	padding-bottom: 1rem;
+	/* padding-bottom: 1rem; */
+}
+
+.home__subhead {
+  margin-bottom: var(--mb-2);
+	/* padding-bottom: 1rem; */
+  font-size: var(--h3-font-size);
 }
 
 .about {
