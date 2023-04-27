@@ -1,4 +1,4 @@
-DataComp baseline: No filtering,0.614,0.723,12800000000,4-26-2023
-DataComp baseline: LAION-2B filtering,0.631,0.754,1300000000,4-26-2023
-DataComp baseline: CLIP score (L/14 30%),0.645,0.764,3800000000,4-26-2023
-DataComp baseline: Image-based ∩ CLIP score (L/14 30%),0.658,0.792,1400000000,4-26-2023
+4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.792,0.653,1400000000,DataComp team
+4-28-2023,Baseline: CLIP score (L/14 30%),0.764,0.641,3800000000,DataComp team
+4-28-2023,Baseline: LAION-2B filtering,0.755,0.627,1300000000,DataComp team
+4-28-2023,Baseline: No filtering,0.723,0.611,12800000000,DataComp team

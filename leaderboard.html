@@ -12,12 +12,15 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/images/corner.png" type="image/x-icon">
 
-    <!-- Added Libraries -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
-    <!-- StyleSheets -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <style>
       table .selector{
@@ -37,8 +40,13 @@
         background-color: #8756D7;
         color: white;
       }
+      th, td { white-space: nowrap; }
+      /* .leaderboard-tb {
+        max-width: 90% !important;
+      } */
     </style>
     <script>
+
       function highlightCell(event) {
         const cell = event.target;
         cell.classList.add('highlighted');
@@ -67,6 +75,13 @@
             table.classList.add('hidden');
           } else {
             table.classList.remove('hidden');
+            var table_id_for_datatable = '#' + track + '--' + scale + '-tb';
+            var table = new DataTable(table_id_for_datatable);
+            table.destroy();
+            var table = new DataTable(table_id_for_datatable, {
+              scrollX: true,
+              search: false
+            });
           }
         });
       }
@@ -163,14 +178,14 @@
        <h4 class="leader__title"> Filtering track, xlarge scale </h4>
          <table class="styled-table" id="filter-track--xlarge-scale-tb">
 			 <thead style="background-color:#69C39E;">
-        <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
-			 </thead>
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       </thead>
 			 <tbody id='filter-track--xlarge-scale-tbody'>
 			 </body>
 		 </table>
@@ -180,13 +195,13 @@
  		 <h4 class="leader__title"> Filtering track, large scale </h4>
           <table class="styled-table" id="filter-track--large-scale-tb">
  			 <thead style="background-color:#EB725F;">
-        <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
  			 </thead>
  			 <tbody id='filter-track--large-scale-tbody'>
  			 </body>
@@ -197,13 +212,13 @@
  		 <h4 class="leader__title"> Filtering track, medium scale </h4>
           <table class="styled-table" id="filter-track--medium-scale-tb">
  			 <thead style="background-color:#5594F5;">
-        <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
  			 </thead>
  			 <tbody id='filter-track--medium-scale-tbody'>
  			 </body>
@@ -214,13 +229,13 @@
  		 <h4 class="leader__title"> Filtering track, small scale </h4>
           <table class="styled-table" id="filter-track--small-scale-tb">
  			 <thead style="background-color:#EAB14B;">
-        <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
  			 </thead>
  			 <tbody id='filter-track--small-scale-tbody'>
  			 </body>
@@ -231,13 +246,13 @@
    		<h4 class="leader__title"> BYOD track, xlarge scale </h4>
             <table class="styled-table" id="filter-byod--xlarge-scale-tb">
    			 <thead style="background-color:#69C39E;">
-          <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+          <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
    			 </thead>
    			 <tbody id='byod-track--xlarge-scale-tbody'>
    			 </body>
@@ -248,13 +263,13 @@
     		<h4 class="leader__title"> BYOD track, large scale </h4>
              <table class="styled-table" id="filter-byod--large-scale-tb">
     			 <thead style="background-color:#EB725F;">
-            <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+            <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
     			 </thead>
     			 <tbody id='byod-track--large-scale-tbody'>
     			 </body>
@@ -265,13 +280,13 @@
     		 <h4 class="leader__title"> BYOD track, medium scale </h4>
              <table class="styled-table" id="filter-byod--medium-scale-tb">
     			 <thead style="background-color:#5594F5;">
-            <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+            <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
     			 </thead>
     			 <tbody id='byod-track--medium-scale-tbody'>
     			 </body>
@@ -282,13 +297,13 @@
     		 <h4 class="leader__title"> BYOD track, small scale </h4>
              <table class="styled-table" id="filter-byod--small-scale-tb">
     			 <thead style="background-color:#EAB14B;">
-            <th width='3%'></th>
-        <th width='50%'>Team</th>
-        <th>Average <br> Performance</th>
-       <th>ImageNet <br> Accuracy</th>
-       <th>Dataset <br> Size</th>
-       <!-- <th>Checkpoint</th> -->
-       <th>Date</th>
+            <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
     			 </thead>
     			 <tbody id='byod-track--small-scale-tbody'>
     			 </body>
@@ -301,77 +316,27 @@
          <br>
          <script>
 
-              fetch('data/filter_xlarge.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('filter-track--xlarge-scale-tbody');
-                    csv_string_to_table(data, table_container);
+          var tracks = ['filter'];
+          var scales = ['xlarge', 'large', 'medium', 'small'];
+          for (let track of tracks) {
+            for (let scale of scales) {
+              fetch('data/' + track + '_' + scale + '.csv')
+              .then(function(response){
+                return response.text();
+              })
+              .then(function(data){
+                var table_id = track + '-track--' + scale + '-scale-tb';
+                var table_container = document.getElementById(table_id);
+                csv_string_to_table(data, table_container);
+                var table_id_for_datatable = '#' + table_id;
+                let table = new DataTable(table_id_for_datatable, {
+                  scrollX: true,
+                  search: false
                 });
-         
-                fetch('data/filter_large.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('filter-track--large-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
-
-                fetch('data/filter_medium.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('filter-track--medium-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
-         
-                fetch('data/filter_small.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('filter-track--small-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
-
-                fetch('data/byod_xlarge.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('byod-track--xlarge-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
-         
-                fetch('data/byod_large.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('byod-track--large-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
-
-                fetch('data/byod_medium.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('byod-track--medium-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
-         
-                fetch('data/byod_small.csv')
-                .then(function(response){
-                    return response.text();
-                })
-                .then(function(data){
-                    var table_container = document.getElementById('byod-track--small-scale-tbody');
-                    csv_string_to_table(data, table_container);
-                });
+                // $('#' + table_id).DataTable();
+              });
+            }
+          }
 
         function csv_string_to_table(csvData, tableBody) {
             const table = tableBody.parentElement;
@@ -380,24 +345,24 @@
        
        
         function processData(csvData, table) {
-    const tableBody = table.querySelector('tbody');
-    const rows = csvData.split('\n');
-    const data = rows.map(row => row.split(',')).filter(row => row.length > 1); // Filter out empty rows
+          const tableBody = table.querySelector('tbody');
+          const rows = csvData.split('\n');
+          const data = rows.map(row => row.split(',')).filter(row => row.length > 1); // Filter out empty rows
 
-    // Sort the data array based on a particular value (column)
-    const columnIndexToSortBy = 1; // Change this to the desired column index
-    data.sort((a, b) => {
-        if (a[columnIndexToSortBy] === undefined || b[columnIndexToSortBy] === undefined) {
-            return 0;
-        }
-        return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
-    });
+          // Sort the data array based on a particular value (column)
+          const columnIndexToSortBy = 3; // Change this to the desired column index
+          data.sort((a, b) => {
+              if (a[columnIndexToSortBy] === undefined || b[columnIndexToSortBy] === undefined) {
+                  return 0;
+              }
+              return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
+          });
 
     populateTable(data, tableBody);
 }
 
 function populateTable(data, tableBody) {
-    const columnIndexForScientificNotation = 3; // Change this to the desired column index
+    const columnIndexForScientificNotation = 4; // Change this to the desired column index
 
     data.forEach((rowData, rowIndex) => {
         const row = document.createElement('tr');
@@ -425,47 +390,6 @@ function populateTable(data, tableBody) {
     });
 }
 
-// function populateTable(data, tableBody) {
-//     data.forEach((rowData, rowIndex) => {
-//         const row = document.createElement('tr');
-
-//         // Add row number at the beginning of each row
-//         const rowNumberCell = document.createElement('td');
-//         rowNumberCell.textContent = rowIndex + 1;
-//         row.appendChild(rowNumberCell);
-
-//         rowData.forEach(cellData => {
-//             const cell = document.createElement('td');
-//             cell.textContent = cellData;
-//             row.appendChild(cell);
-//         });
-
-//         tableBody.appendChild(row);
-//     });
-// }
-         
-        //  function csv_string_to_table(csv_string, element_to_insert_table) {
-        //     var rows = csv_string.trim().split(/\r?\n|\r/); // Regex to split/separate the CSV rows
-        //     var table = '';
-        //     var table_rows = '';
-        //     var table_header = '';
-        //     var stdNo = 0;
-
-        //     rows.forEach(function(row, row_index) {
-        //        var trow = document.createElement('tr');
-        //        var table_columns = '';
-        //        var columns = row.split(','); // split/separate the columns in a row
-        //        var td1 = document.createElement('td');
-        //        td1.innerHTML = ++ stdNo;
-        //        trow.appendChild(td1);
-        //        columns.forEach(function(column, column_index) {
-        //            var td1 = document.createElement('td');
-        //            td1.innerHTML = column;
-        //            trow.appendChild(td1);
-        //        });
-        //        element_to_insert_table.appendChild(trow);
-        //    });
-        //    }
             </script>
 
     </main>
@@ -475,9 +399,6 @@ function populateTable(data, tableBody) {
     <footer class="section" id="footer">
       <div class="footer container grid">
 
-      <!-- <p class="footer__copy">
-        &#169; Developed by Shahidul Alam. Designed by Bedimcode. (Inspired)
-      </p> -->
     </footer>
     <!-- Footer end  -->
 
