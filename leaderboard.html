@@ -131,9 +131,6 @@
             <li class="nav__item">
               <a href="./index.html#faqs" class="nav__link">FAQs</a>
             </li>
-            <!-- <li class="nav__item">
-              <a href="./leaderboard.html#leaderboard" class="nav__link">Leaderboard</a>
-            </li> -->
             <li class="nav__item">
               <a href="./workshop.html#first" class="nav__link">Workshop</a>
             </li>
@@ -148,7 +145,6 @@
         <a href="./leaderboard.html#first" class="btn btn__header">Leaderboard</a>
       </nav>
     </header>
-    <!-- Header Part End -->
     <!-- Header Part End -->
 
     <!-- Main content body start  -->
@@ -244,7 +240,7 @@
          
    		<div class="container leaderboard-tb hidden" id="byod-track--xlarge-scale-container" style="padding-top:5rem;">
    		<h4 class="leader__title"> BYOD track, xlarge scale </h4>
-            <table class="styled-table" id="filter-byod--xlarge-scale-tb">
+            <table class="styled-table" id="byod-track--xlarge-scale-tb">
    			 <thead style="background-color:#69C39E;">
           <th>Rank</th> 
         <th>Created</th>
@@ -261,7 +257,7 @@
             
         <div class="container leaderboard-tb hidden" id="byod-track--large-scale-container" style="padding-top:5rem;">
     		<h4 class="leader__title"> BYOD track, large scale </h4>
-             <table class="styled-table" id="filter-byod--large-scale-tb">
+             <table class="styled-table" id="byod-track--large-scale-tb">
     			 <thead style="background-color:#EB725F;">
             <th>Rank</th> 
         <th>Created</th>
@@ -278,7 +274,7 @@
             
         <div class="container leaderboard-tb hidden" id="byod-track--medium-scale-container" style="padding-top:5rem;">
     		 <h4 class="leader__title"> BYOD track, medium scale </h4>
-             <table class="styled-table" id="filter-byod--medium-scale-tb">
+             <table class="styled-table" id="byod-track--medium-scale-tb">
     			 <thead style="background-color:#5594F5;">
             <th>Rank</th> 
         <th>Created</th>
@@ -295,7 +291,7 @@
             
         <div class="container leaderboard-tb hidden" id="byod-track--small-scale-container" style="padding-top:5rem;">
     		 <h4 class="leader__title"> BYOD track, small scale </h4>
-             <table class="styled-table" id="filter-byod--small-scale-tb">
+             <table class="styled-table" id="byod-track--small-scale-tb">
     			 <thead style="background-color:#EAB14B;">
             <th>Rank</th> 
         <th>Created</th>
@@ -316,7 +312,7 @@
          <br>
          <script>
 
-          var tracks = ['filter'];
+          var tracks = ['filter', 'byod'];
           var scales = ['xlarge', 'large', 'medium', 'small'];
           for (let track of tracks) {
             for (let scale of scales) {
@@ -326,14 +322,15 @@
               })
               .then(function(data){
                 var table_id = track + '-track--' + scale + '-scale-tb';
+                console.log(table_id)
                 var table_container = document.getElementById(table_id);
                 csv_string_to_table(data, table_container);
                 var table_id_for_datatable = '#' + table_id;
+                console.log(table_id_for_datatable)
                 let table = new DataTable(table_id_for_datatable, {
                   scrollX: true,
                   search: false
                 });
-                // $('#' + table_id).DataTable();
               });
             }
           }
@@ -378,7 +375,7 @@ function populateTable(data, tableBody) {
             // Format the cell data for the specified column index
             if (cellIndex === columnIndexForScientificNotation) {
                 const number = parseFloat(cellData);
-                cell.textContent = isNaN(number) ? cellData : number.toExponential(2);
+                cell.textContent = isNaN(number) ? cellData : number.toExponential(1);
             } else {
                 cell.textContent = cellData;
             }

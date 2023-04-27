@@ -1,2 +1,2 @@
-DataComp baseline: LAION-2B,0.616,0.757,2300000000,4-26-2023
-DataComp baseline: CommonPool CLIP score filter + 4 external sources (upsampled 6x),0.640,0.776,3900000000,4-26-2023
+4-28-2023,Baseline: LAION-2B,0.757,0.612,2300000000,DataComp team
+4-28-2023,Baseline: CommonPool CLIP score filter + 4 external sources (upsampled 6x),0.776,0.638,3900000000,DataComp team

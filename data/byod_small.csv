@@ -1,5 +1,5 @@
-DataComp baseline: CC12M,0.203,0.099,10000000,4-26-2023
-DataComp baseline: RedCaps,0.167,0.076,11000000,4-26-2023
-DataComp baseline: Shutterstock,0.183,0.083,58000000,4-26-2023
-DataComp baseline: YFCC15M,0.162,0.071,15000000,4-26-2023
-DataComp baseline: 4 external sources,0.185,0.095,109000000,4-26-2023
+4-28-2023,Baseline: CC12M,0.099,0.202,10185253,DataComp team
+4-28-2023,Baseline: RedCaps,0.076,0.167,11394153,DataComp team
+4-28-2023,Baseline: Shutterstock 15M,0.083,0.183,14998856,DataComp team
+4-28-2023,Baseline: YFCC15M,0.071,0.162,14826000,DataComp team
+4-28-2023,Baseline: 4 external sources,0.095,0.184,51404262,DataComp team
