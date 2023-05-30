@@ -141,12 +141,12 @@
 <p class="home__desc" style="margin-bottom: 0;">
 
 You can find instructions to get started with DataComp at our our github <a href="https://github.com/mlfoundations/datacomp">repository</a> <br>
-You can get started with our smallest pool to your current directory with the following commands: <br>
+You can get started with our smallest (12.8M) data pool to your current directory with the following commands (note this pool is 450GB so the download can take a few hours) <br>
 <br>
 <code>
   git clone https://github.com/mlfoundations/datacomp.git  <br>
   cd datacomp <br>
-  conda env create -f environment.yml  <br>
+  bash create_env.sh <br>
   conda activate datacomp  <br>
   python download_upstream.py --scale small --data_dir .  <br>
 </code>
