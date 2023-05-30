@@ -93,7 +93,19 @@
 
       Our workshop Towards the Next Generation of Computer Vision Datasets has been accepted to <a href="https://iccv2023.thecvf.com/" target="_blank">ICCV 2023</a> in Paris.
       <br>
-      The workshop will showcase a series of DataComp submissions, along with other data-centric papers and multiple invited talks by experts in the field.
+      The workshop will showcase a series of DataComp submissions, along with other data-centric papers and multiple invited talks by experts in the field. 
+
+
+
+<h4 class="workshop__subtitle" align="left">Why work on Datasets?</h4>
+<p class="home__desc" style="margin-bottom: 0;">
+  Despite the central role large image-text datasets play in multimodal learning, little is known about them. 
+  Many state-of-the-art datasets are proprietary and only available in corporate research labs, as in the case of CLIP, DALL-E, Flamingo, and GPT-4.  
+  But even for public datasets such as LAION-2B. it is unclear how design choices during dataset construction, such as the data source or filtering techniques, affect the resulting models. 
+  While there are thousands of ablation studies for algorithmic design choices (loss function, optimizer, model architecture, etc.), datasets are usually treated as monolithic artifacts without detailed investigation or further improvements. 
+  Moreover, datasets currently lack the benchmark-driven development process that has enabled the community to produce a steady stream of advances on the model side. 
+  The hope is that we can use this workshop and the DataComp benchmark as a way to drive community involvement in this space.
+</p>
 
 <!-- Call for Papers -->
 <h4 class="workshop__subtitle" align="left">Call for DataComp Submission Papers</h4>
@@ -122,8 +134,22 @@
   Submitted papers should not exceed 4 pages (excluding references) and should follow the ICCV 2023 formatting guidelines. 
   The submission deadline will be <b>August 21st, 2023</b>. Accepted papers will be presented at the workshop.
   The submission portal for workshop papers is <a href="https://openreview.net/group?id=thecvf.com/ICCV/2023/Workshop/TNGCV_General&referrer=%5BHomepage%5D(%2F)"> here </a>
+</p>
 
 
+<h4 class="workshop__subtitle" align="left">Getting started with DataComp</h4>
+<p class="home__desc" style="margin-bottom: 0;">
+
+You can find instructions to get started with DataComp at our our github <a href="https://github.com/mlfoundations/datacomp">repository</a> <br>
+You can get started with our smallest pool to your current directory with the following commands: <br>
+<br>
+<code>
+  git clone https://github.com/mlfoundations/datacomp.git  <br>
+  cd datacomp <br>
+  conda env create -f environment.yml  <br>
+  conda activate datacomp  <br>
+  python download_upstream.py --scale small --data_dir .  <br>
+</code>
 </p>
 
 <!-- Workshop Schedule -->
