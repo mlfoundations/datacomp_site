@@ -1,7 +1,7 @@
-4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.297,0.323,14000000,DataComp team
-4-28-2023,Baseline: No filtering,0.176,0.254,128000000,DataComp team
-4-28-2023,Baseline: Basic filtering,0.226,0.280,30000000,DataComp team
-4-28-2023,Baseline: LAION-2B filtering,0.230,0.287,13000000,DataComp team
-4-28-2023,Baseline: CLIP score (L/14 30%),0.273,0.323,38000000,DataComp team
-4-28-2023,Baseline: Image-based,0.268,0.307,29000000,DataComp team
-4-28-2023,Baseline: Text-based,0.255,0.301,31000000,DataComp team
+4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.297,0.328,14000000,DataComp team
+4-28-2023,Baseline: No filtering,0.176,0.258,128000000,DataComp team
+4-28-2023,Baseline: Basic filtering,0.226,0.285,30000000,DataComp team
+4-28-2023,Baseline: LAION-2B filtering,0.230,0.292,13000000,DataComp team
+4-28-2023,Baseline: CLIP score (L/14 30%),0.273,0.328,38000000,DataComp team
+4-28-2023,Baseline: Image-based,0.268,0.312,29000000,DataComp team
+4-28-2023,Baseline: Text-based,0.255,0.307,31000000,DataComp team

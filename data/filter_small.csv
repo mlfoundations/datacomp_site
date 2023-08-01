@@ -1,7 +1,7 @@
-4-28-2023,Baseline: Basic filtering,0.030,0.137,3000000,DataComp team
+4-28-2023,Baseline: Basic filtering,0.030,0.142,3000000,DataComp team
 4-28-2023,Baseline: LAION-2B filtering,0.031,0.133,1300000,DataComp team
-4-28-2023,Baseline: CLIP score (L/14 30%),0.051,0.172,3400000,DataComp team
-4-28-2023,Baseline: Image-based,0.043,0.158,3000000,DataComp team
-4-28-2023,Baseline: Text-based,0.046,0.156,3200000,DataComp team
+4-28-2023,Baseline: CLIP score (L/14 30%),0.051,0.173,3400000,DataComp team
+4-28-2023,Baseline: Image-based,0.043,0.159,3000000,DataComp team
+4-28-2023,Baseline: Text-based,0.046,0.157,3200000,DataComp team
 4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.039,0.144,1400000,DataComp team
 4-28-2023,Baseline: No filtering,0.025,0.132,12800000,DataComp team
