@@ -1,3 +1,4 @@
+8-03-2023,WS (baselines),0.059,0.175,,SprocketLab
 8-03-2023,BLIP2 captions CLIP score (L/14 50%),0.080,0.196,6400000,Thao Nguyen
 8-02-2023,Baseline: CLIP score (L/14 30%),0.049,0.164,3400000,cvl
 4-28-2023,Baseline: Basic filtering,0.030,0.142,3000000,DataComp team
