@@ -4,4 +4,4 @@
 4-28-2023,Baseline: Image-based,0.572,0.476,293000000,DataComp team
 4-28-2023,Baseline: Text-based,0.561,0.466,317000000,DataComp team
 4-28-2023,Baseline: LAION-2B filtering,0.553,0.501,130000000,DataComp team
-4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.631,0.537,1400000000,DataComp team
+4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.631,0.537,140000000,DataComp team
