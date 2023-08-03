@@ -1,3 +1,4 @@
+8-03-2023,CLIP score (L/14 30%) and BLIP2 (remaining 70%, filtered),0.318,0.373,Thao Nguyen
 7-26-2023,mixed_rules,0.303,0.337,24138036,TCU
 4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.297,0.328,14000000,DataComp team
 4-28-2023,Baseline: No filtering,0.176,0.258,128000000,DataComp team
