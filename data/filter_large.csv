@@ -1,4 +1,4 @@
-8-03-2023,Image-based intersect (CLIP score (L/14 30%) and BLIP2 (remaining 70% filtered)),0.643,0.549,1280000000,Thao Nguyen
+8-03-2023,Image-based intersect (CLIP score (L/14 30%) and BLIP2 (remaining 70% filtered)),0.643,0.549,222000000,Thao Nguyen
 4-28-2023,Baseline: No filtering,0.459,0.437,1280000000,DataComp team
 4-28-2023,Baseline: Basic filtering,0.516,0.458,298000000,DataComp team
 4-28-2023,Baseline: CLIP score (L/14 30%),0.578,0.529,384000000,DataComp team
