@@ -1,4 +1,3 @@
-date,name,imagenet_acc,avg_acc,dataset_size,author,writeup
 4-28-2023,Baseline: No filtering,0.459,0.437,1280000000,DataComp team,https://arxiv.org/abs/2304.14108
 4-28-2023,Baseline: Basic filtering,0.516,0.458,298000000,DataComp team,https://arxiv.org/abs/2304.14108
 4-28-2023,Baseline: CLIP score (L/14 30%),0.578,0.529,384000000,DataComp team,https://arxiv.org/abs/2304.14108

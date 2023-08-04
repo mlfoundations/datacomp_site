@@ -1,4 +1,3 @@
-date,name,imagenet_acc,avg_acc,dataset_size,author,writeup
 4-28-2023,Baseline: CC12M,0.245,0.272,10185253,DataComp team,https://arxiv.org/abs/2304.14108
 4-28-2023,Baseline: RedCaps,0.237,0.263,11394153,DataComp team,https://arxiv.org/abs/2304.14108
 4-28-2023,Baseline: Shutterstock 15M,0.229,0.29,14998856,DataComp team,https://arxiv.org/abs/2304.14108

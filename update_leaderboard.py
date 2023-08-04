@@ -56,5 +56,5 @@ for scale in scales:
         df = data[(data['track'] == track) & (data['scale'] == scale)]
         df = df.drop(['track', 'scale'], axis=1)
         track = track.replace('ing', '')
-        df.to_csv(f'data/{track}_{scale}.csv', header=True, index=False)
+        df.to_csv(f'data/{track}_{scale}.csv', header=False, index=False)
 
