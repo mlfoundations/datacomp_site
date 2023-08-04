@@ -1,5 +1,7 @@
 import pandas as pd
 
+import validators
+
 import firebase_admin
 from firebase_admin import credentials, db
 
@@ -33,16 +35,19 @@ for key, info in fb_data.items():
     sd = date.split('-')
     date = '-'.join([sd[1], sd[2], sd[0]])
 
+    writeup = info.get('writeup', '')
+    is_url = validators.url(writeup)
+
     row = {
         'track': info['track'],
         'scale': info['scale'],
         'date': date,
         'name': info['method_name'],
-        'imagenet_acc': imagenet_acc,
-        'avg_acc': avg_acc,
+        'imagenet_acc': f'{imagenet_acc:.3f}',
+        'avg_acc': f'{avg_acc:.3f}',
         'dataset_size': info['dataset_size'],
         'author': info['author'],
-        'writeup': info.get('writeup', '')
+        'writeup': writeup
     }
 
     data = data.append(row, ignore_index=True)

@@ -5,6 +5,6 @@
 4-28-2023,Baseline: Text-based,0.046,0.157,3200000,DataComp team,https://arxiv.org/abs/2304.14108
 4-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.039,0.144,1400000,DataComp team,https://arxiv.org/abs/2304.14108
 4-28-2023,Baseline: No filtering,0.025,0.132,12800000,DataComp team,https://arxiv.org/abs/2304.14108
-08-03-2023,WS (baselines),0.0593,0.17484686730673413,12800000,SprocketLab,
-08-02-2023,CLIP score (L/14 30%) baseline,0.0488,0.16422590851434613,3400000,cvl,
-08-03-2023,"BLIP2 captions, CLIP score (L/14 50%)",0.07974,0.19646103418148483,6400000,Thao Nguyen,https://arxiv.org/abs/2307.10350
+08-03-2023,WS (baselines),0.059,0.175,12800000,SprocketLab,
+08-02-2023,CLIP score (L/14 30%) baseline,0.049,0.164,3400000,cvl,
+08-03-2023,"BLIP2 captions, CLIP score (L/14 50%)",0.080,0.196,6400000,Thao Nguyen,https://arxiv.org/abs/2307.10350
