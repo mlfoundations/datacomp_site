@@ -363,7 +363,7 @@
           var scales = ['xlarge', 'large', 'medium', 'small'];
           for (let track of tracks) {
             for (let scale of scales) {
-              fetch('data/' + track + '_' + scale + '.csv')
+              fetch('data/' + track + '_' + scale + '.tsv')
               .then(function(response){
                 return response.text();
               })
