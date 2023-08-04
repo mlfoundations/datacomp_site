@@ -364,7 +364,7 @@
           var scales = ['small', 'medium', 'large', 'xlarge'];
           for (let track of tracks) {
             for (let scale of scales) {
-              fetch('data/' + track + '_' + scale + '.csv')
+              fetch('data/' + track + '_' + scale + '.tsv')
               .then(function(response){
                 return response.text();
               })
@@ -392,7 +392,7 @@
         function processData(csvData, table) {
           const tableBody = table.querySelector('tbody');
           const rows = csvData.split('\n');
-          const data = rows.map(row => row.split(',')).filter(row => row.length > 1); // Filter out empty rows
+          const data = rows.map(row => row.split('\t')).filter(row => row.length > 1); // Filter out empty rows
 
           // Sort the data array based on a particular value (column)
           const columnIndexToSortBy = 3; // Change this to the desired column index

@@ -39,7 +39,7 @@ for key, info in fb_data.items():
         'track': info['track'],
         'scale': info['scale'],
         'date': date,
-        'name': info['method_name'].replace(',', ''),
+        'name': info['method_name'],
         'imagenet_acc': f'{imagenet_acc:.3f}',
         'avg_acc': f'{avg_acc:.3f}',
         'dataset_size': info['dataset_size'],
@@ -58,5 +58,5 @@ for scale in scales:
         df = data[(data['track'] == track) & (data['scale'] == scale)]
         df = df.drop(['track', 'scale'], axis=1)
         track = track.replace('ing', '')
-        df.to_csv(f'data/{track}_{scale}.csv', header=False, index=False)
+        df.to_csv(f'data/{track}_{scale}.tsv', header=False, index=False, sep='\t')
 
