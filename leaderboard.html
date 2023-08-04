@@ -394,13 +394,6 @@
           const rows = csvData.split('\n');
           const data = rows.map(row => row.split('\t')).filter(row => row.length > 1); // Filter out empty rows
 
-          // For each row, adjust the 7th column (index 6) to make it a link, if it's not empty
-          data.forEach((row) => {
-              if (row[6] && row[6].trim() !== "") {
-                  row[6] = `<a href="${row[6]}">${row[6]}</a>`;
-              }
-          });
-
           // Sort the data array based on a particular value (column)
           const columnIndexToSortBy = 3; // Change this to the desired column index
           data.sort((a, b) => {
@@ -409,6 +402,27 @@
               }
               return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
           });
+
+          // Populating the table logic
+        data.forEach(rowData => {
+            const row = document.createElement('tr');
+            rowData.forEach((cellData, idx) => {
+                const cell = document.createElement('td');
+
+                // Special handling for the 7th column
+                if (idx === 6 && cellData && cellData.trim() !== "") {
+                    const anchor = document.createElement('a');
+                    anchor.href = cellData;
+                    anchor.textContent = cellData;
+                    cell.appendChild(anchor);
+                } else {
+                    cell.textContent = cellData; 
+                }
+
+                row.appendChild(cell);
+            });
+            tableBody.appendChild(row);
+        });
 
     populateTable(data, tableBody);
 }
