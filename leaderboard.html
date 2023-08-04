@@ -100,24 +100,7 @@
               scrollX: true,
               searching: false,
               lengthChange: false,
-              columns: [
-                { data: 0 },
-                { data: 1 },
-                { data: 2 },
-                { data: 3 },
-                { data: 4 },
-                { data: 5 },
-                {
-                  data: 6,
-                  render: function(data, type, row) {
-                    if (data && data.trim() !== "") {
-                            return '<a href="' + data + '">' + data + '</a>';
-                        } else {
-                            return data;
-                        }
-                    }
-                }
-              ]
+              
             });
           }
         });
@@ -394,24 +377,7 @@
                   scrollX: true,
                   searching: false,
                   lengthChange: false,
-                  columns: [
-                    { data: 0 },
-                    { data: 1 },
-                    { data: 2 },
-                    { data: 3 },
-                    { data: 4 },
-                    { data: 5 },
-                    {
-                      data: 6,
-                      render: function(data, type, row) {
-                        if (data && data.trim() !== "") {
-                                return '<a href="' + data + '">' + data + '</a>';
-                            } else {
-                                return data;
-                            }
-                        }
-                    }
-                  ]
+                  
                 });
               });
             }
