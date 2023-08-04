@@ -1,2 +1,3 @@
-4-28-2023,Baseline: LAION-2B,0.757,0.621,2300000000,DataComp team
-4-28-2023,Baseline: CommonPool CLIP score filter + 4 external sources (upsampled 6x),0.776,0.649,3900000000,DataComp team
+date,name,imagenet_acc,avg_acc,dataset_size,author,writeup
+4-28-2023,Baseline: LAION-2B,0.757,0.621,2300000000,DataComp team,https://arxiv.org/abs/2304.14108
+4-28-2023,Baseline: CommonPool CLIP score filter + 4 external sources (upsampled 6x),0.776,0.649,3900000000,DataComp team,https://arxiv.org/abs/2304.14108
