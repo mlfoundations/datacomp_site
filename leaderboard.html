@@ -403,27 +403,6 @@
               return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
           });
 
-          // Populating the table logic
-        data.forEach(rowData => {
-            const row = document.createElement('tr');
-            rowData.forEach((cellData, idx) => {
-                const cell = document.createElement('td');
-
-                // Special handling for the 7th column
-                if (idx === 6 && cellData && cellData.trim() !== "") {
-                    const anchor = document.createElement('a');
-                    anchor.href = cellData;
-                    anchor.textContent = cellData;
-                    cell.appendChild(anchor);
-                } else {
-                    cell.textContent = cellData; 
-                }
-
-                row.appendChild(cell);
-            });
-            tableBody.appendChild(row);
-        });
-
     populateTable(data, tableBody);
 }
 
