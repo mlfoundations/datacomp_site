@@ -424,6 +424,11 @@ function populateTable(data, tableBody) {
             if (cellIndex === columnIndexForScientificNotation) {
                 const number = parseFloat(cellData);
                 cell.textContent = isNaN(number) ? cellData : number.toExponential(1);
+            } else if (cellIndex === 6 && cellData && cellData.trim() !== "") {
+                const anchor = document.createElement('a');
+                anchor.href = cellData;
+                anchor.textContent = cellData;
+                cell.appendChild(anchor);
             } else {
                 cell.textContent = cellData;
             }
