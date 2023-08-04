@@ -99,7 +99,25 @@
             var table = new DataTable(table_id_for_datatable, {
               scrollX: true,
               searching: false,
-              lengthChange: false
+              lengthChange: false,
+              columns: [
+                { data: 0 },
+                { data: 1 },
+                { data: 2 },
+                { data: 3 },
+                { data: 4 },
+                { data: 5 },
+                {
+                  data: 6,
+                  render: function(data, type, row) {
+                    if (data && data.trim() !== "") {
+                            return '<a href="' + data + '">' + data + '</a>';
+                        } else {
+                            return data;
+                        }
+                    }
+                }
+              ]
             });
           }
         });
@@ -192,7 +210,7 @@
     </div>
       
 
-		<div class="container leaderboard-tb" id="filter-track--xlarge-scale-container" style="padding-top:2rem;">
+		<div class="container leaderboard-tb hidden" id="filter-track--xlarge-scale-container" style="padding-top:2rem;">
        <h4 class="leader__title"> Leaderboard </h4>
        <br>
          <table class="styled-table" id="filter-track--xlarge-scale-tb">
@@ -249,7 +267,7 @@
  		 </table>
  		 </div>
          
-    <div class="container leaderboard-tb hidden" id="filter-track--small-scale-container" style="padding-top:2rem;">
+    <div class="container leaderboard-tb" id="filter-track--small-scale-container" style="padding-top:2rem;">
  		 <h4 class="leader__title"> Leaderboard </h4>
       <br>
           <table class="styled-table" id="filter-track--small-scale-tb">
@@ -360,7 +378,7 @@
          <script>
 
           var tracks = ['filter', 'byod'];
-          var scales = ['xlarge', 'large', 'medium', 'small'];
+          var scales = ['small', 'medium', 'large', 'xlarge'];
           for (let track of tracks) {
             for (let scale of scales) {
               fetch('data/' + track + '_' + scale + '.csv')
@@ -375,7 +393,25 @@
                 let table = new DataTable(table_id_for_datatable, {
                   scrollX: true,
                   searching: false,
-                  lengthChange: false
+                  lengthChange: false,
+                  columns: [
+                    { data: 0 },
+                    { data: 1 },
+                    { data: 2 },
+                    { data: 3 },
+                    { data: 4 },
+                    { data: 5 },
+                    {
+                      data: 6,
+                      render: function(data, type, row) {
+                        if (data && data.trim() !== "") {
+                                return '<a href="' + data + '">' + data + '</a>';
+                            } else {
+                                return data;
+                            }
+                        }
+                    }
+                  ]
                 });
               });
             }

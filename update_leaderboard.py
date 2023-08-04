@@ -1,7 +1,5 @@
 import pandas as pd
 
-import validators
-
 import firebase_admin
 from firebase_admin import credentials, db
 
@@ -36,7 +34,6 @@ for key, info in fb_data.items():
     date = '-'.join([sd[1], sd[2], sd[0]])
 
     writeup = info.get('writeup', '')
-    is_url = validators.url(writeup)
 
     row = {
         'track': info['track'],
