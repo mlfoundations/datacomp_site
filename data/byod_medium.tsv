@@ -3,3 +3,4 @@
 04-28-2023	Baseline: Shutterstock 15M	0.229	0.29	14998856	DataComp team	https://arxiv.org/abs/2304.14108
 04-28-2023	Baseline: YFCC15M	0.232	0.257	14826000	DataComp team	https://arxiv.org/abs/2304.14108
 04-28-2023	Baseline: 4 external sources	0.36	0.345	51404262	DataComp team	https://arxiv.org/abs/2304.14108
+08-03-2023	CLIP score (L/14 30%) and BLIP2 (remaining 70%, filtered)	0.318	0.373	83600000	Thao Nguyen	https://arxiv.org/abs/2307.10350
