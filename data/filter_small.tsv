@@ -10,3 +10,4 @@
 08-12-2023	> w <	0.056	0.180	4118560	SprocketLab	
 08-25-2023	Fondant baseline, CLIP score (L/14 1%-30%), ascii > 4	0.053	0.168	3642339	ML6 (Niels Rogge, Alexander Remmerie)	
 08-02-2023	CLIP score (L/14 30%) baseline	0.049	0.164	3400000	cvl	
+09-06-2023	BLIP2-COCO-finetuned_similarity_top-35%	0.053	0.177	12800000	LINE-CVL	
