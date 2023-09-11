@@ -35,17 +35,22 @@ for key, info in fb_data.items():
 
     writeup = info.get('writeup', '')
 
-    row = {
-        'track': info['track'],
-        'scale': info['scale'],
-        'date': date,
-        'name': info['method_name'],
-        'imagenet_acc': f'{imagenet_acc:.3f}',
-        'avg_acc': f'{avg_acc:.3f}',
-        'dataset_size': info['dataset_size'],
-        'author': info['author'],
-        'writeup': writeup
-    }
+    try:
+        row = {
+            'track': info['track'],
+            'scale': info['scale'],
+            'date': date,
+            'name': info['method_name'],
+            'imagenet_acc': f'{imagenet_acc:.3f}',
+            'avg_acc': f'{avg_acc:.3f}',
+            'dataset_size': info['dataset_size'],
+            'author': info['author'],
+            'writeup': writeup
+        }
+    except KeyError as e:
+        print(f'Key error for {key}.\nFull info: {info}')
+        print(e)
+        import sys; sys.exit()
 
     data = data.append(row, ignore_index=True)
 
