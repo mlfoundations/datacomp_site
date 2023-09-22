@@ -85,6 +85,13 @@ h4 {
   line-height: 1.1;
 }
 
+h5 {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  line-height: 1.1;
+}
+
 h4:hover {
   color: grey;
 }
