@@ -7,6 +7,7 @@
 04-28-2023	Baseline: Text-based	0.255	0.307	31000000	DataComp team	https://arxiv.org/abs/2304.14108
 09-05-2023	Density-based Self-supervised Prototypes Pruning	0.334	0.345	19210815	Meta	
 08-22-2023	WS (baselines)	0.305	0.342	24834679	SprocketLab	
+11-08-2023	Hype sampler + DFN	0.382	0.379	21472466	NAVER AI Lab	
 11-07-2023	Hype sampler	0.346	0.373	19703881	NAVER AI Lab	
 07-26-2023	Mixed rules	0.303	0.337	24138036	TCU	https://arxiv.org/abs/2309.15954
 09-08-2023	The Devil Is in the Details	0.320	0.371	22655074	TCU	https://arxiv.org/abs/2309.15954
