@@ -727,6 +727,14 @@ body.dark__theme {
     .track2 {
           grid-template-columns: 1fr 3fr;
     		}
+
+        .track3 {
+          grid-template-columns: 1fr 3fr;
+    		}
+
+        .track4 {
+          grid-template-columns: 1fr 1fr;
+    		}
         
     /* .about {
     grid-template-columns:  3fr 2fr 1.25fr;
