@@ -14,6 +14,6 @@
 09-08-2023	The Devil Is in the Details - ImageNet best	0.336	0.355	22413014	TCU	https://arxiv.org/abs/2309.15954
 09-07-2023	OCR and Naive english filtering	0.294	0.343	33642853	MA and RH	
 08-25-2023	SIEVE	0.303	0.354	24012387	Meta	https://arxiv.org/abs/2310.02110
-08-17-2023	T-MARS: Improving Visual Representations by Circumventing Text Feature Learning	0.330	0.361	25300000	CMU	https://arxiv.org/abs/2307.03132
-09-08-2023	TMARS + SSFT	0.338	0.362	-	CMU	https://arxiv.org/abs/2307.03132
+08-17-2023	T-MARS: Improving Visual Representations by Circumventing Text Feature Learning	0.330	0.361	25300000	CMU	
+09-08-2023	TMARS + SSFT	0.338	0.362	-	CMU	
 10-02-2023	Data Filtering Networks	0.371	0.373		DFN	

@@ -5,6 +5,7 @@
 04-28-2023	Baseline: Text-based	0.046	0.157	3200000	DataComp team	https://arxiv.org/abs/2304.14108
 04-28-2023	Baseline: Image-based ∩ CLIP score (L/14 30%)	0.039	0.144	1400000	DataComp team	https://arxiv.org/abs/2304.14108
 04-28-2023	Baseline: No filtering	0.025	0.132	12800000	DataComp team	https://arxiv.org/abs/2304.14108
+01-08-2024	Content Alignment Model ∩ Flipped CLIP Score	0.064	0.178	2662509	DISCO ETH Zürich	
 08-25-2023	text masked CLIP 30%	0.048	0.164	12800000	NUM	
 08-03-2023	WS (baselines)	0.059	0.175	12800000	SprocketLab	
 08-12-2023	> w <	0.056	0.180	4118560	SprocketLab	
