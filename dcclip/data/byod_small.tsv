@@ -1,0 +1,11 @@
+04-28-2023	Baseline: CC12M	0.099	0.205	10185253	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: RedCaps	0.076	0.168	11394153	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: Shutterstock 15M	0.083	0.185	14998856	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: YFCC15M	0.071	0.164	14826000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: 4 external sources	0.095	0.186	51404262	DataComp team	https://arxiv.org/abs/2304.14108
+09-11-2023	CommonPool + arXiv + PMC	0.024	0.139	12800000	nopperl	https://github.com/nopperl/clip_arxiv_pmc
+09-04-2023	BLIP caption modification (50%) + CC12M (30%) + Eval_trainsets	0.074	0.235	9500000	cvl	
+09-06-2023	BLIP caption modification (50%) + CC12M (30%) + Eval_trainsets (MNIST*3)	0.072	0.242	9600000	LINE-CVL	
+09-06-2023	BLIP caption modification (50%) + CC12M (30%)	0.080	0.201	8900000	LINE-CVL	
+08-03-2023	BLIP2 captions, CLIP score (L/14 50%)	0.080	0.196	6400000	Thao Nguyen	https://arxiv.org/abs/2307.10350
+08-25-2023	Image-based intersect (CLIP score (L/14 30%) and BLIP2 (L/14 75%))	0.083	0.195	3800000	Thao Nguyen	

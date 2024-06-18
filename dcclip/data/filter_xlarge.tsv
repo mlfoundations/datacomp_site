@@ -1,0 +1,5 @@
+04-28-2023	Baseline: Image-based ∩ CLIP score (L/14 30%)	0.792	0.663	1400000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: CLIP score (L/14 30%)	0.764	0.65	3800000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: LAION-2B filtering	0.755	0.636	1300000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: No filtering	0.723	0.621	12800000000	DataComp team	https://arxiv.org/abs/2304.14108
+10-02-2023	Data Filtering Networks	0.814	0.669		DFN	

@@ -43,6 +43,7 @@
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 4.5rem;
+    --biggest-font-size-2: 3.5rem;
 		--second-biggest-font-size: 2rem;
     --h2-font-size: 1.75rem;
     --h3-font-size: 1.4rem;
@@ -91,6 +92,14 @@ h5 {
   color: var(--title-color);
   line-height: 1.1;
 }
+
+h6 {
+  font-weight: var(--font-semi-bold);
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+
 
 h4:hover {
   color: grey;
@@ -190,6 +199,44 @@ img {
   margin-right: var(--mb-1-5);
 }
 
+.center-div {
+  width: 95%; /* Take up 80% of the parent's width */
+  margin: 0 auto; /* Center the div horizontally */
+  /* Optional: max-width: 1000px; Limit the maximum width if desired */
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-3 {
+  color: #666666;
+  margin: 10px;
+}
+
+.clickable-region {
+  width: 45%;
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 15px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+.clickable-region img {
+  width: calc(100% - 20px); /* Adjust width to account for padding */
+  height: auto;
+  padding: 10px; /* Padding around the image */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+.clickable-region:hover {
+  transform: scale(1.05); /* Slightly scale up the region */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Shadow for a lifted effect */
+}
+
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -212,6 +259,19 @@ img {
 }
 .btn:hover {
   background-color: var(--first-color-alt);
+}
+
+.btn2 {
+  display: inline-block;
+  background-color: #47C3CD;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+}
+.btn2:hover {
+  background-color: #47C3CD;
 }
 
 
@@ -331,6 +391,12 @@ img {
   /* margin-bottom: var(--mb-0-75); */
 }
 
+.home__title2 {
+  font-size: var(--biggest-font-size-2);
+  /* font-weight: var(--font-bold); */
+  /* margin-bottom: var(--mb-0-75); */
+}
+
 
 .group__title {
   font-size: 3rem;
@@ -361,6 +427,12 @@ img {
 
 .home__subhead {
   margin-bottom: var(--mb-2);
+	/* padding-bottom: 1rem; */
+  font-size: var(--h3-font-size);
+}
+
+.home__subhead2 {
+  margin-bottom: 0rem;
 	/* padding-bottom: 1rem; */
   font-size: var(--h3-font-size);
 }
@@ -470,7 +542,7 @@ img {
 }
 
 footer {
-  background-color: var(--first-color-lighten);
+  /* background-color: var(--first-color-lighten); */
   padding-bottom: 2rem;
 }
 
@@ -536,6 +608,7 @@ footer {
 .show-scroll {
   bottom: 3rem;
 }
+
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
@@ -664,6 +737,14 @@ body.dark__theme {
     outline: 10px solid #7E49D4;
     margin: auto;
   }
+
+  .app__img2 {
+    order: -1;
+    border-radius: 25%;
+    border: #FFFFFF 7px solid;
+    outline: 10px solid #47C3CD;
+    margin: auto;
+  }
 .group__img {
   order: -1;
 }
@@ -695,6 +776,11 @@ body.dark__theme {
   }
   .home {
     padding: 2rem 0 14rem;
+		grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home2 {
+    padding: 0rem 0 14rem;
 		grid-template-columns: repeat(1, 1fr);
   }
 

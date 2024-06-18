@@ -1,0 +1,41 @@
+track,scale,date,name,imagenet_acc,avg_acc,dataset_size
+byod,large,04-28-2023,Baseline: CommonPool CLIP score filter + 4 external sources,0.609,0.536,500000000
+byod,large,04-28-2023,Baseline: CommonPool CLIP score filter + 4 external sources (upsampled 2x),0.621,0.541,500000000
+byod,large,04-28-2023,Baseline: LAION-2B,0.585,0.515,2300000000
+byod,medium,04-28-2023,Baseline: CC12M,0.245,0.272,10185253
+byod,medium,04-28-2023,Baseline: RedCaps,0.237,0.263,11394153
+byod,medium,04-28-2023,Baseline: Shutterstock 15M,0.229,0.290,14998856
+byod,medium,04-28-2023,Baseline: YFCC15M,0.232,0.257,14826000
+byod,medium,04-28-2023,Baseline: 4 external sources,0.360,0.345,51404262
+byod,small,04-28-2023,Baseline: CC12M,0.099,0.205,10185253
+byod,small,04-28-2023,Baseline: RedCaps,0.076,0.168,11394153
+byod,small,04-28-2023,Baseline: Shutterstock 15M,0.083,0.185,14998856
+byod,small,04-28-2023,Baseline: YFCC15M,0.071,0.164,14826000
+byod,small,04-28-2023,Baseline: 4 external sources,0.095,0.186,51404262
+byod,xlarge,04-28-2023,Baseline: LAION-2B,0.757,0.621,2300000000
+byod,xlarge,04-28-2023,Baseline: CommonPool CLIP score filter + 4 external sources (upsampled 6x),0.776,0.649,3900000000
+filtering,large,04-28-2023,Baseline: No filtering,0.459,0.437,1280000000
+filtering,large,04-28-2023,Baseline: Basic filtering,0.516,0.458,298000000
+filtering,large,04-28-2023,Baseline: CLIP score (L/14 30%),0.578,0.529,384000000
+filtering,large,04-28-2023,Baseline: Image-based,0.572,0.476,293000000
+filtering,large,04-28-2023,Baseline: Text-based,0.561,0.466,317000000
+filtering,large,04-28-2023,Baseline: LAION-2B filtering,0.553,0.501,130000000
+filtering,large,04-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.631,0.537,140000000
+filtering,medium,04-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.297,0.328,14000000
+filtering,medium,04-28-2023,Baseline: No filtering,0.176,0.258,128000000
+filtering,medium,04-28-2023,Baseline: Basic filtering,0.226,0.285,30000000
+filtering,medium,04-28-2023,Baseline: LAION-2B filtering,0.230,0.292,13000000
+filtering,medium,04-28-2023,Baseline: CLIP score (L/14 30%),0.273,0.328,38000000
+filtering,medium,04-28-2023,Baseline: Image-based,0.268,0.312,29000000
+filtering,medium,04-28-2023,Baseline: Text-based,0.255,0.307,31000000
+filtering,small,04-28-2023,Baseline: Basic filtering,0.030,0.142,3000000
+filtering,small,04-28-2023,Baseline: LAION-2B filtering,0.031,0.133,1300000
+filtering,small,04-28-2023,Baseline: CLIP score (L/14 30%),0.051,0.173,3400000
+filtering,small,04-28-2023,Baseline: Image-based,0.043,0.159,3000000
+filtering,small,04-28-2023,Baseline: Text-based,0.046,0.157,3200000
+filtering,small,04-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.039,0.144,1400000
+filtering,small,04-28-2023,Baseline: No filtering,0.025,0.132,12800000
+filtering,xlarge,04-28-2023,Baseline: Image-based ∩ CLIP score (L/14 30%),0.792,0.663,1400000000
+filtering,xlarge,04-28-2023,Baseline: CLIP score (L/14 30%),0.764,0.650,3800000000
+filtering,xlarge,04-28-2023,Baseline: LAION-2B filtering,0.755,0.636,1300000000
+filtering,xlarge,04-28-2023,Baseline: No filtering,0.723,0.621,12800000000

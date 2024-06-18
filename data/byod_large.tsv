@@ -1,4 +1,0 @@
-04-28-2023	Baseline: CommonPool CLIP score filter + 4 external sources	0.609	0.536	500000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: CommonPool CLIP score filter + 4 external sources (upsampled 2x)	0.621	0.541	500000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: LAION-2B	0.585	0.515	2300000000	DataComp team	https://arxiv.org/abs/2304.14108
-08-03-2023	Image-based intersect (CLIP score (L/14 30%) and BLIP2 (remaining 70%, filtered))	0.643	0.549	222000000	Thao Nguyen	https://arxiv.org/abs/2307.10350

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQEPB7QH14"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PQEPB7QH14');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="In search of the next generation of multimodal datasets" />
+    <meta name="author" content="Sarah Pratt" />
+
+    <title>DataComp</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/corner.png" type="image/x-icon">
+
+    <!-- Added Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+  </head>
+  <body>
+
+    <!-- Header Part Start -->
+    <header class="header">
+      <nav class="nav container">
+        <a href="../index.html" class="nav__logo">  DataComp </a>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#participate" class="nav__link">Participate</a>
+            </li>
+            <li class="nav__item">
+              <a href="#tracks" class="nav__link">Tracks</a>
+            </li>
+            <!-- <li class="nav__item">
+              <a href="#track2" class="nav__link">Track 2</a>
+            </li> -->
+            <li class="nav__item">
+              <a href="#faqs" class="nav__link">FAQs</a>
+            </li>
+            <!-- <li class="nav__item">
+              <a href="./leaderboard.html#leaderboard" class="nav__link">Leaderboard</a>
+            </li> -->
+            <li class="nav__item">
+              <a href="./workshop.html#first" class="nav__link">Workshop</a>
+            </li>
+            <li class="nav__item">
+              <a href="./people.html#group" class="nav__link">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ham__btn">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+        <a href="./leaderboard.html" class="btn btn__header">Leaderboard</a>
+      </nav>
+    </header>
+    <!-- Header Part End -->
+
+    <!-- Main content body start  -->
+    <main class="main">
+      <!-- Home  -->
+      
+     
+      
+      <section class="section container" id="home">
+        <div class="home grid">
+
+          <div class="home__data">
+
+			<div style="padding-top: 1rem;">
+				 <img width="200" height="8" src="../assets/images/datacompclip.png" align="left"> <p>   <br></br><h1 class="home__title"> &nbsp;DataComp - CLIP </h1>
+			</div>
+
+            <p class="home__subhead" style="clear: left;">
+							<br />
+              <b> Welcome to DataComp, </b> the machine learning benchmark where the models are fixed and the 
+              challenge is to find the best possible data! </p>
+              
+              <p class="home__desc" style="clear: left;">
+              Prior competitions in machine learning have focused on
+              finding the best model, with a fixed set of training and test data. However, many recent advances (CLIP, DALL-E, Stable Diffusion, or Flamingo)
+              are due in part to large multimodal datasets. DataComp centers the role that data plays by fixing the training code,
+              and encouraging researchers to innovate by proposing new training sets.
+          </p>
+              
+              <p class="home__desc" style="clear: left;">
+                  We provide an experimental
+                   testbed centered around a new candidate pool of
+                   12.8 billion image-text pairs from Common Crawl. Participants in our benchmark design new filtering
+                   techniques or curate new data sources and then
+                   evaluate them by running our standardized CLIP
+                   training code followed by an evaluation on 38
+                   downstream datasets. Our benchmark consists of
+                   multiple scales, with four candidate pool sizes
+                   and associated compute budgets ranging from
+                   12.8 million to 12.8 billion. This multi-scale design facilitates the study of scaling trends and makes the
+                   benchmark accessible to researchers with varying
+                   resources. More information can be found on <a href='https://laion.ai/blog/datacomp/'> <font color="#EB725F"> this blog post. </font> </a>
+            </p>
+            <!-- <a href="./leaderboard.html#first" class="btn1">Paper</a> &nbsp; <a href="./leaderboard.html#first" class="btn1">Code</a> -->
+            <a href="./getting_started.html" class="btn1">Get Started</a> &nbsp; <a href="https://arxiv.org/abs/2304.14108" target="_blank" class="btn1">Paper</a> &nbsp; <a href="https://github.com/mlfoundations/datacomp" class="btn1">Code</a>
+
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="section container" id="participate">
+        <div>
+                       
+              <div class="container home grid">
+                 
+                     <img id="participate_im" align="center"  style="padding-bottom:5rem;" width="100%" src="../assets/images/flow.png">
+                     
+                     <h3 class="faq__title" style="padding-bottom:1rem;">
+                       How to Participate
+                   </h3>
+                    
+                        <div>
+                        <b>  <font color="#EB725F"> A. Choose which scale </font> </b>is best for you based on your resources: small, medium, large and xlarge. Each scale
+                       corresponds to a differently sized data pool and model. You may sumbit to multiple scales. As a reference, the training cost associated with each scale can be approximated with the following: small is similar to 
+                       fine-tuning on ImageNet-1k, medium is similar to training on ImageNet-1k from scratch, large is similar to training on ImageNet-21k from scratch, xlarge is similar to training the OpenAI CLIP model.<br><br>
+                       
+                       <b> <font color="#69C39E"> B. Select data </font> </b> to create a candidate dataset. To do this, choose one of two tracks: Filtering,
+                       where only image-text pairs from the CommonPool we provide are allowed; 
+                       or BYOD, where any data source (including our pool) is permitted. 
+                       You may sumbit to multiple tracks. <br><br>
+                       
+                       <b> <font color="#7E49D4"> C. Train a CLIP model </font> </b> on your candidate dataset. CLIP size, architecture, 
+                       and hyperparameters are fixed for each scale. <br><br>
+                       
+                     
+                        <b> <font color="#5594F5"> D. Evaluate the trained model </font> </b> on a suite of 38 diverse downstream 
+                        tasks to measure the effectiveness of your candidate training dataset. <br><br>
+                        
+                        
+                        <b> <font color="#EBB14B"> E. Submit to our leaderboard </font></b> to compare to baseline methods and other teams!
+                        Please ensure that the dataset, trained model, and evaluation results are public.
+                        </div>
+                    
+                    
+                 </div>
+        </div>
+      </section>
+
+      <!-- About  -->
+      <section class="section container" id="tracks" style="padding-bottom:10rem;">
+        <div class="grid about">
+          <!-- <div class="about__data">
+						<img align="left"  width="620" height="300" src="./assets/images/getting_started.png">
+				</div> -->
+                
+               
+			<div>
+                <h3 class="faq__title" style="padding-bottom:1rem;">
+	              Tracks
+              </h3>
+	            <h3 class="title" style="padding-bottom:1rem;">
+	              Rules for the filtering track
+              </h3>
+                
+	            <p  class="security__desc" style="padding-bottom:0.7rem;">
+       
+                  1) Participants can enter submissions for one or many different scales: small, medium, large or xlarge, which represent the raw number of image-text pairs in a CommonPool that should be filtered.
+                  
+                  </p>
+                  
+                  <p  class="security__desc" style="padding-bottom:0.7rem;">
+                  2) After choosing a scale, participants generate a list of uids, where each uid refers to a CommonPool sample. The list of uids is used to recover image-text pairs from the pool, which is used for downstream CLIP training. <a href='https://www.datacomp.ai/data/sample_uids.npy'> <font color="#EB725F"> Click to download an example uid file. </font> </a>
+                  
+                  </p>
+                  
+                  <p  class="security__desc" style="padding-bottom:0.7rem;">
+                  3) Duplicate uids are allowed.
+	            </p>
+                
+                <p  class="security__desc" style="padding-bottom:0.7rem;">
+                4) Participants are not allowed to modify the training procedure. Hence, changing hyperparameters, model architecture, optimizer, compute budget, or number of training steps is not allowed. Changing any other training details is also not allowed.
+              </p>
+              
+              <p  class="security__desc" style="padding-bottom:0.7rem;">
+              5) Participants are strongly encouraged to submit and open-source both the list of uids and the code used to generate this list; however, this is not required.
+            </p>
+            
+            <p  class="security__desc" style="padding-bottom:0.7rem;">
+            6) To avoid overfitting, we do not permit running any code or algorithmic dependence on the test images of the evaluation tasks. However, use of other images associated with these tasks (e.g., supervised training sets) is permitted.
+          </p>
+          
+          <p  class="security__desc" style="padding-bottom:0.7rem;">
+          7) Participants can use templates or class labels from the downstream tasks to bootstrap their filtering algorithms.
+        </p>
+              
+                
+							</div>
+                            
+                            <div class="about__data">
+                                       <img align="center"  width="210" src="../assets/images/svgs/pool.svg">
+                               </div>
+                            
+          </div>
+          
+          <div class="grid track2" style="padding-top:4rem;">
+            <!-- <div class="about__data">
+  						<img align="left"  width="620" height="300" src="./assets/images/getting_started.png">
+  				</div> -->
+                  
+                  <div class="about__data">
+                             <img align="center"  width="220" src="../assets/images/svgs/byod.svg">
+                     </div>
+                  
+                 
+  				<div>
+  	            <h3 class="title" style="padding-bottom:1rem;">
+  	              Amendments for the BYOD track
+              </h3>
+                  
+  	            <p  class="security__desc" style="padding-bottom:0.7rem;">
+         
+                    1) Participants are allowed to augment CommonPool data with existing datasets, so long as these data sources do not contain test images from the evaluation tasks. Participants can use data from any CommonPool; however, they are not required to do so.
+                    
+                    </p>
+                    
+                    
+                    <p  class="security__desc" style="padding-bottom:0.7rem;">
+                    2) Assembling one's own dataset is allowed; however, test images from the evaluation tasks can neither be contained nor otherwise used to construct said dataset. We encourage releasing the image urls or the images themselves in addition to the text for each image. We also encourage rigorous documentation of face-blurring and other data safety checks. We reserve the right to run our own safety code on participant provided data and disqualify entries that do not meet adequate safety standards.
+  	            </p>
+                  
+                
+                  
+  							</div>
+                              
+                           
+                              
+            </div>
+      </section>
+      
+      
+      
+      <!-- About  -->
+      <!-- <section class="section container" id="track2" style="padding-bottom:5rem;">
+        <div class="grid track2">
+                
+                <div class="about__data">
+                           <img align="center"  width="220" src="./assets/images/byod.png">
+                   </div>
+                
+               
+				<div>
+	            <h2 class="faq__title" style="padding-bottom:1rem;">
+	              Rules for Track 2: BYOD
+	            </h2>
+                
+	            <p  class="security__desc" style="padding-bottom:0.7rem;">
+       
+                  1) Data from evaluation or test sets is not permitted, however, using training data from evaluation tasks is allowed.  
+                  
+                  </p>
+                  
+                  <p  class="security__desc" style="padding-bottom:0.7rem;">
+                  2) Use of data must be documented in the following way: were images from the train sets of evaluation tasks used? Were existing datasets used? What self-curated image-text pairs were used and which safety steps were taken? 
+                  
+                  </p>
+                  
+                  <p  class="security__desc" style="padding-bottom:0.7rem;">
+                  3) Assembling one's own dataset is allowed. However, we require releasing either the image urls or the images themselves in addition to the text for each image. We additionally require rigorous documentation of face-blurring and safety checks. We reserve the right to run our own safety code on participant provided data and disqualify entries that do not meet adequate safety standards.
+	            </p>
+                
+                <p  class="security__desc" style="padding-bottom:0.7rem;">
+                4) Participants can use data from the fixed pool track; however, they are not required to do so.
+              </p>
+              
+                
+							</div>
+                            
+                         
+                            
+          </div>
+      </section> -->
+
+      <!-- Security  -->
+      <section class="section container" id="faqs">
+        <div class="security grid" style="padding-top:10rem;padding-bottom:14rem">
+            
+   
+      
+          <div class="security__data">
+              
+            <h2 class="faq__title" style="padding-top:1rem">
+              FAQ <br />
+
+            </h2>
+            <p class="security__desc">
+                <p  class="security__desc" style="padding-bottom:1rem;">
+                <b> Can I include a piece of data more than once in training? </b> <br > 
+                Yes! For the CommonPool track you can do this by simply including a uid multiple times. 
+                </p>
+                
+                <p class="security__desc">
+                    <p  class="security__desc" style="padding-bottom:1rem;">
+                    <b> Can we use the same filtering algorithm to enter multiple tracks/scales? </b> <br > Yes! We encourage participation in both tracks and multiple scales. 
+                    </p>
+                
+            <p class="security__desc">
+                <p  class="security__desc" style="padding-bottom:1rem;">
+                <b> Is any data forbidden from use in the Bring Your Own Data track? </b> <br > The only data that is explicitly forbidden is the test images from the evaluation tasks and data that cannot be released publicly. However, we additionally require that external data meets our own safety standards and may be excluded if it does not.
+                </p>
+                
+                    
+                
+            </p>
+          </div>
+          
+          <div>
+        <img align="right"  width="100%" src="../assets/images/svgs/getting_started.svg">
+        </div>
+          
+        
+
+		<!-- <div>
+		<img align="right"  width="520" height="300" src="./assets/images/submitting.png">
+		</div> -->
+
+        </div>
+      </section>
+      
+      
+      <div align="center" style="padding-bottom:1rem;padding-top:14rem;">
+      <img width="80%" src="../assets/images/svgs/logo.svg">
+      </div>
+      
+      
+
+    </main>
+    <!-- Main content body end  -->
+
+    <!-- Footer start  -->
+    <footer class="section" style="background-color: #7D49D4;" id="footer">
+      <div class="footer container grid">
+
+      <!-- <p class="footer__copy">
+        &#169; Developed by Shahidul Alam. Designed by Bedimcode. (Inspired)
+      </p> -->
+    </footer>
+    <!-- Footer end  -->
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

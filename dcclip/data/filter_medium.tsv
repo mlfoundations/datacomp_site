@@ -1,0 +1,19 @@
+04-28-2023	Baseline: Image-based ∩ CLIP score (L/14 30%)	0.297	0.328	14000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: No filtering	0.176	0.258	128000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: Basic filtering	0.226	0.285	30000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: LAION-2B filtering	0.23	0.292	13000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: CLIP score (L/14 30%)	0.273	0.328	38000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: Image-based	0.268	0.312	29000000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: Text-based	0.255	0.307	31000000	DataComp team	https://arxiv.org/abs/2304.14108
+09-05-2023	Density-based Self-supervised Prototypes Pruning	0.334	0.345	19210815	Meta	
+08-22-2023	WS (baselines)	0.305	0.342	24834679	SprocketLab	
+11-08-2023	Hype sampler + DFN	0.382	0.379	21472466	NAVER AI Lab	
+11-07-2023	Hype sampler	0.346	0.373	19703881	NAVER AI Lab	
+07-26-2023	Mixed rules	0.303	0.337	24138036	TCU	https://arxiv.org/abs/2309.15954
+09-08-2023	The Devil Is in the Details	0.320	0.371	22655074	TCU	https://arxiv.org/abs/2309.15954
+09-08-2023	The Devil Is in the Details - ImageNet best	0.336	0.355	22413014	TCU	https://arxiv.org/abs/2309.15954
+09-07-2023	OCR and Naive english filtering	0.294	0.343	33642853	MA and RH	
+08-25-2023	SIEVE	0.303	0.354	24012387	Meta	https://arxiv.org/abs/2310.02110
+08-17-2023	T-MARS: Improving Visual Representations by Circumventing Text Feature Learning	0.330	0.361	25300000	CMU	
+09-08-2023	TMARS + SSFT	0.338	0.362	-	CMU	
+10-02-2023	Data Filtering Networks	0.371	0.373		DFN	

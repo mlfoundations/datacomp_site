@@ -1,0 +1,9 @@
+04-28-2023	Baseline: CC12M	0.245	0.272	10185253	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: RedCaps	0.237	0.263	11394153	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: Shutterstock 15M	0.229	0.29	14998856	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: YFCC15M	0.232	0.257	14826000	DataComp team	https://arxiv.org/abs/2304.14108
+04-28-2023	Baseline: 4 external sources	0.36	0.345	51404262	DataComp team	https://arxiv.org/abs/2304.14108
+09-06-2023	CLIP (30%) + CC12M (50%) + Eval_trainsets (MNIST*3)	0.285	0.390	42000000	LINE-CVL	
+09-06-2023	Image-cluster and CLIP (40%) + CC12M (50%) + Eval_trainsets (MNIST*3)	0.326	0.398	22000000	LINE-CVL	
+08-03-2023	CLIP score (L/14 30%) and BLIP2 (remaining 70%, filtered)	0.318	0.373	83600000	Thao Nguyen	https://arxiv.org/abs/2307.10350
+08-25-2023	Image-based intersect (CLIP score (L/14 30%) and BLIP2 (L/14 75%))	0.347	0.375	37600000	Thao Nguyen	

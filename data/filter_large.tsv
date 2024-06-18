@@ -1,9 +1,0 @@
-04-28-2023	Baseline: No filtering	0.459	0.437	1280000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: Basic filtering	0.516	0.458	298000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: CLIP score (L/14 30%)	0.578	0.529	384000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: Image-based	0.572	0.476	293000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: Text-based	0.561	0.466	317000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: LAION-2B filtering	0.553	0.501	130000000	DataComp team	https://arxiv.org/abs/2304.14108
-04-28-2023	Baseline: Image-based ∩ CLIP score (L/14 30%)	0.631	0.537	140000000	DataComp team	https://arxiv.org/abs/2304.14108
-08-25-2023	SIEVE	0.597	0.546	235708665	Meta	https://arxiv.org/abs/2310.02110
-10-02-2023	Data Filtering Networks	0.678	0.560		DFN	

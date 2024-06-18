@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQEPB7QH14"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PQEPB7QH14');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="In search of the next generation of multimodal datasets" />
+    <meta name="author" content="Sarah Pratt" />
+
+    <title>DataComp</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/corner.png" type="image/x-icon">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      table .selector{
+        border-collapse: collapse;
+        width: 100%;
+        display: block;
+        table-layout: fixed;
+        font-size: 1000px;
+        text-align: center !important;
+      }
+      .select-tr {
+        width: 100%;
+      }
+      .td-select{
+        text-align: center;
+        padding: 20px;
+        background-color: #dddddd;
+        text-align: center;
+      }
+      .highlighted {
+        background-color: #8756D7;
+        color: white;
+      }
+      .styled-table {
+        margin-top: 1rem;
+        margin-bottom: 12rem;
+      }
+      th, td { white-space: nowrap; }
+      /* .leaderboard-tb {
+        max-width: 90% !important;
+      } */
+    </style>
+    <script>
+
+      function highlightCell(event) {
+        const cell = event.target;
+        cell.classList.add('highlighted');
+      }
+    
+      function unhighlightOtherCells(clickedCell) {
+        const parentTable = clickedCell.closest("table");
+        const cells = parentTable.querySelectorAll('td');
+        cells.forEach(cell => {
+          if (cell !== clickedCell) {
+            cell.classList.remove('highlighted');
+            cell.classList.remove('clicked');
+          }
+        });
+      }
+
+      function clearTables() {
+        const track = document.querySelector('.td-select.clicked.track').id;
+        const scale = document.querySelector('.td-select.clicked.scale').id;
+        const table_id = track + '--' + scale + '-container';
+
+        const tables = document.querySelectorAll('.leaderboard-tb');
+        // Iterate through tables 
+        tables.forEach(table => {
+          if (table.id !== table_id) {
+            table.classList.add('hidden');
+          } else {
+            table.classList.remove('hidden');
+            var table_id_for_datatable = '#' + track + '--' + scale + '-tb';
+            var table = new DataTable(table_id_for_datatable);
+            table.destroy();
+            var table = new DataTable(table_id_for_datatable, {
+              scrollX: true,
+              searching: false,
+              lengthChange: false,
+              pageLength: 50,
+            });
+          }
+        });
+      }
+    
+      function handleClick(event) {
+        const cell = event.target;
+        cell.classList.add('highlighted');
+        unhighlightOtherCells(cell);
+        clearTables();
+      }
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        const cells = document.querySelectorAll('td');
+        cells.forEach(cell => {
+          cell.addEventListener('mouseover', highlightCell);
+          cell.addEventListener('mouseout', event => {
+            if (!event.target.classList.contains('clicked')) {
+              event.target.classList.remove('highlighted');
+            }
+          });
+          cell.addEventListener('click', event => {
+            cell.classList.add('clicked');
+            handleClick(event);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- Header Part Start -->
+    <!-- Header Part Start -->
+    <header class="header">
+      <nav class="nav container">
+        <a href="../index.html" class="nav__logo">  DataComp </a>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="./index.html#participate" class="nav__link">Participate</a>
+            </li>
+            <li class="nav__item">
+              <a href="./index.html#tracks" class="nav__link">Tracks</a>
+            </li>
+            <li class="nav__item">
+              <a href="./index.html#faqs" class="nav__link">FAQs</a>
+            </li>
+            <li class="nav__item">
+              <a href="./workshop.html#first" class="nav__link">Workshop</a>
+            </li>
+            <li class="nav__item">
+              <a href="./people.html#group" class="nav__link">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ham__btn">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+        <a href="./leaderboard.html" class="btn btn__header">Leaderboard</a>
+      </nav>
+    </header>
+    <!-- Header Part End -->
+
+    <!-- Main content body start  -->
+    <main class="main">
+      <!-- Home  -->
+
+      <div class="container" id="first" style="margin-top:5rem !important;">
+
+      <h4 class="leader__title"> Select the track and scale </h4>
+      <br>
+        <table id="track-tb" class="selector" style="width: 100%;">
+          <tr class="select-tr">
+            <td id="filter-track" style="width: 50%;" class="td-select track highlighted clicked">Filtering track</td>
+            <td id="byod-track" style="width: 50%;" class="td-select track">BYOD track</td>
+          </tr>
+        </table>
+        <table id="scale-tb" class="selector" style="width: 100%;">
+          <tr  class="select-tr">
+            <td id="small-scale" style="width: 25%;"  class="td-select scale highlighted clicked">small</td>
+            <td id="medium-scale" style="width: 25%;"  class="td-select scale">medium</td>
+            <td id="large-scale" style="width: 25%;"   class="td-select scale">large</td>
+            <td id="xlarge-scale" style="width: 25%;"  class="td-select scale">xlarge</td>
+          </tr>
+        </table>
+    </div>
+    </div>
+      
+
+		<div class="container leaderboard-tb hidden" id="filter-track--xlarge-scale-container" style="padding-top:2rem;">
+       <h4 class="leader__title"> Leaderboard </h4>
+       <br>
+         <table class="styled-table" id="filter-track--xlarge-scale-tb">
+			 <thead style="background-color:#69C39E;">
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+       </thead>
+			 <tbody id='filter-track--xlarge-scale-tbody'>
+			 </body>
+		 </table>
+		 </div>
+         
+    <div class="container leaderboard-tb hidden" id="filter-track--large-scale-container" style="padding-top:2rem;">
+ 		 <h4 class="leader__title"> Leaderboard </h4>
+      <br>
+          <table class="styled-table" id="filter-track--large-scale-tb">
+ 			 <thead style="background-color:#EB725F;">
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+ 			 </thead>
+ 			 <tbody id='filter-track--large-scale-tbody'>
+ 			 </body>
+ 		 </table>
+ 		 </div>
+         
+    <div class="container leaderboard-tb hidden" id="filter-track--medium-scale-container" style="padding-top:2rem;">
+ 		 <h4 class="leader__title"> Leaderboard</h4>
+      <br>
+          <table class="styled-table" id="filter-track--medium-scale-tb">
+ 			 <thead style="background-color:#5594F5;">
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+ 			 </thead>
+ 			 <tbody id='filter-track--medium-scale-tbody'>
+ 			 </body>
+ 		 </table>
+ 		 </div>
+         
+    <div class="container leaderboard-tb" id="filter-track--small-scale-container" style="padding-top:2rem;">
+ 		 <h4 class="leader__title"> Leaderboard </h4>
+      <br>
+          <table class="styled-table" id="filter-track--small-scale-tb">
+ 			 <thead style="background-color:#EAB14B;">
+        <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+ 			 </thead>
+ 			 <tbody id='filter-track--small-scale-tbody'>
+ 			 </body>
+ 		 </table>
+ 		 </div>
+         
+   		<div class="container leaderboard-tb hidden" id="byod-track--xlarge-scale-container" style="padding-top:2rem;">
+   		<h4 class="leader__title"> Leaderboard </h4>
+       <br>
+            <table class="styled-table" id="byod-track--xlarge-scale-tb">
+   			 <thead style="background-color:#69C39E;">
+          <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+   			 </thead>
+   			 <tbody id='byod-track--xlarge-scale-tbody'>
+   			 </body>
+   		 </table>
+   		 </div>
+            
+        <div class="container leaderboard-tb hidden" id="byod-track--large-scale-container" style="padding-top:2rem;">
+    		<h4 class="leader__title">Leaderboard </h4><br>
+             <table class="styled-table" id="byod-track--large-scale-tb">
+    			 <thead style="background-color:#EB725F;">
+            <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+    			 </thead>
+    			 <tbody id='byod-track--large-scale-tbody'>
+    			 </body>
+    		 </table>
+    		 </div>
+            
+        <div class="container leaderboard-tb hidden" id="byod-track--medium-scale-container" style="padding-top:2rem;">
+    		 <h4 class="leader__title"> Leaderboard </h4>
+         <br>
+             <table class="styled-table" id="byod-track--medium-scale-tb">
+    			 <thead style="background-color:#5594F5;">
+            <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+    			 </thead>
+    			 <tbody id='byod-track--medium-scale-tbody'>
+    			 </body>
+    		 </table>
+    		 </div>
+            
+        <div class="container leaderboard-tb hidden" id="byod-track--small-scale-container" style="padding-top:2rem;">
+    		 <h4 class="leader__title">Leaderboard</h4>
+         <br>
+             <table class="styled-table" id="byod-track--small-scale-tb">
+    			 <thead style="background-color:#EAB14B;">
+            <th>Rank</th> 
+        <th>Created</th>
+        <th>Submission</th>
+        <th>ImageNet <br> acc.</th>
+        <th>Average <br> perf.</th>
+       <th>Dataset <br> size</th>
+       <th>Authors</th>
+       <th>Writeup</th>
+    			 </thead>
+    			 <tbody id='byod-track--small-scale-tbody'>
+    			 </body>
+    		 </table>
+    		 </div>
+         
+         
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <script>
+
+          var tracks = ['filter', 'byod'];
+          var scales = ['small', 'medium', 'large', 'xlarge'];
+          for (let track of tracks) {
+            for (let scale of scales) {
+              fetch('data/' + track + '_' + scale + '.tsv')
+              .then(function(response){
+                return response.text();
+              })
+              .then(function(data){
+                var table_id = track + '-track--' + scale + '-scale-tb';
+                var table_container = document.getElementById(table_id);
+                csv_string_to_table(data, table_container);
+                var table_id_for_datatable = '#' + table_id;
+                let table = new DataTable(table_id_for_datatable, {
+                  scrollX: true,
+                  searching: false,
+                  lengthChange: false,
+                  pageLength: 50,
+                });
+              });
+            }
+          }
+
+        function csv_string_to_table(csvData, tableBody) {
+            const table = tableBody.parentElement;
+            processData(csvData, table);
+        }
+       
+       
+        function processData(csvData, table) {
+          const tableBody = table.querySelector('tbody');
+          const rows = csvData.split('\n');
+          const data = rows.map(row => row.split('\t')).filter(row => row.length > 1); // Filter out empty rows
+
+          // Sort the data array based on a particular value (column)
+          const columnIndexToSortBy = 3; // Change this to the desired column index
+          data.sort((a, b) => {
+              if (a[columnIndexToSortBy] === undefined || b[columnIndexToSortBy] === undefined) {
+                  return 0;
+              }
+              return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
+          });
+
+    populateTable(data, tableBody);
+}
+
+function populateTable(data, tableBody) {
+    const columnIndexForScientificNotation = 4; // Change this to the desired column index
+
+    data.forEach((rowData, rowIndex) => {
+        const row = document.createElement('tr');
+
+        // Add row number at the beginning of each row
+        const rowNumberCell = document.createElement('td');
+        rowNumberCell.textContent = rowIndex + 1;
+        row.appendChild(rowNumberCell);
+
+        rowData.forEach((cellData, cellIndex) => {
+            const cell = document.createElement('td');
+
+            // Format the cell data for the specified column index
+            if (cellIndex === columnIndexForScientificNotation) {
+                const number = parseFloat(cellData);
+                cell.textContent = isNaN(number) ? cellData : number.toExponential(1);
+            } else if (cellIndex === 6 && cellData && cellData.trim() !== "") {
+                const anchor = document.createElement('a');
+                anchor.href = cellData;
+                anchor.textContent = cellData;
+                cell.appendChild(anchor);
+            } else {
+                cell.textContent = cellData;
+            }
+
+            row.appendChild(cell);
+        });
+
+        tableBody.appendChild(row);
+    });
+}
+
+            </script>
+
+    </main>
+    <!-- Main content body end  -->
+
+    <!-- Footer start  -->
+    <footer class="section" id="footer" style="background-color: #7D49D4;" id="footer">
+      <div class="footer container grid">
+
+    </footer>
+    <!-- Footer end  -->
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

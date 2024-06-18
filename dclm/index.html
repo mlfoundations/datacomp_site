@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQEPB7QH14"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PQEPB7QH14');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="In search of the next generation of multimodal datasets" />
+    <meta name="author" content="Sarah Pratt" />
+
+    <title>DataComp</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/corner.png" type="image/x-icon">
+
+    <!-- Added Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+  </head>
+  <body>
+
+    <!-- Header Part Start -->
+    <header class="header">
+      <nav class="nav container">
+        <a href="../index.html" class="nav__logo">  DataComp </a>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#faqs" class="nav__link">FAQs</a>
+            </li>
+            <li class="nav__item">
+              <a href="./people.html#group" class="nav__link">Team</a>
+            </li>
+            <!-- <li class="nav__item">
+              <a href="#participate" class="nav__link">Participate</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Tracks</a>
+            </li>
+            <li class="nav__item">
+              <a href="#track2" class="nav__link">Track 2</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">FAQs</a>
+            </li>
+            <li class="nav__item">
+              <a href="./leaderboard.html#leaderboard" class="nav__link">Leaderboard</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Workshop</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Team</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="ham__btn">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+        <a href="./leaderboard.html" class="btn2 btn__header">Leaderboard</a>
+      </nav>
+    </header>
+    <!-- Header Part End -->
+
+    <!-- Main content body start  -->
+    <main class="main">
+      <!-- Home  -->
+      
+     
+      
+      <section class="section container" id="home">
+        <div class="home grid">
+
+          <div class="home__data">
+
+			<div style="padding-top: 1rem;">
+				 <img width="200" height="8" src="../assets/images/datacomplang.png" align="left"> <p>   <br></br><h1 class="home__title"> &nbsp;DataComp - LM </h1>
+			</div>
+
+            <p class="home__subhead" style="clear: left;">
+							<br />
+              <b> Welcome to DataComp, </b> the machine learning benchmark where the models are fixed and the 
+              challenge is to find the best possible data! </p>
+              
+              <p class="home__desc" style="clear: left;">
+                Prior competitions in machine learning have focused on finding the best model, with a fixed set 
+                of training and test data. However, many recent advances (GPT-4, Gemni, LLAMA, Mistral) are due 
+                in part to large and diverse language datasets. DataComp centers the role that data plays by fixing 
+                the training code, and encouraging researchers to innovate by proposing new training sets. We provide 
+                an experimental testbed centered around a new candidate pool of 240T tokens from Common Crawl. 
+                Participants in our benchmark design new filtering techniques or curate new data sources and then 
+                evaluate them by running our standardized language model training code followed by an evaluation on 53 
+                downstream datasets. Our benchmark consists of multiple scales, with various candidate pool sizes and 
+                associated compute budgets ranging from 412M to 7B parameters. This multi-scale design facilitates the 
+                study of scaling trends and makes the benchmark accessible to researchers with varying resources.
+          </p>
+              
+              <!-- <p class="home__desc" style="clear: left;">
+                Use <a href='https://docs.google.com/forms/d/e/1FAIpQLSdUmEGT3Opamc-0ieXWTyfvt4udIf0j91ogW5u3tplXlAIw9Q/viewform'> <font color="#47C3CD"><b>this form</b></font> </a> to request access to the full Datacomp-LM data pool. 
+            </p> -->
+            <!-- <a href="./leaderboard.html#first" class="btn1">Paper</a> &nbsp; <a href="./leaderboard.html#first" class="btn1">Code</a> -->
+            <a <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUmEGT3Opamc-0ieXWTyfvt4udIf0j91ogW5u3tplXlAIw9Q/viewform" target="_blank" class="btn2">Request Access</a> &nbsp; <a href="" target="_blank" class="btn2">Paper</a> &nbsp; <a href="https://github.com/mlfoundations/dclm" class="btn2">Code</a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Security  -->
+      <section class="section container" id="faqs">
+        <div class="security grid" style="padding-top:10rem;padding-bottom:14rem">
+            
+   
+      
+          <div class="security__data">
+              
+            <h2 class="faq__title" style="padding-bottom:1rem">
+              FAQ <br />
+
+            </h2>
+            <p class="security__desc">
+                <p  class="security__desc" style="padding-bottom:1rem;">
+                <b> Can I include a piece of data more than once in training? </b> <br > 
+                Yes! For the DCLM-filtering track you can do this by simply including a document multiple times
+                </p>
+
+                <p class="security__desc">
+                  <p  class="security__desc" style="padding-bottom:1rem;">
+                  <b> Can I change the HTML Extraction method </b> <br > Yes! But if you want to participate in the filtering track please use the exact same WARC files as used in DCLMPool 
+                  </p>
+                
+                <p class="security__desc">
+                    <p  class="security__desc" style="padding-bottom:1rem;">
+                    <b> Can we use the same filtering algorithm to enter multiple tracks/scales? </b> <br > Yes! We encourage participation in both tracks and multiple scales. 
+                    </p>
+                
+            <p class="security__desc">
+                <p  class="security__desc" style="padding-bottom:1rem;">
+                <b> Is any data forbidden from use in the Mixing Track? </b> <br > The only data that is explicitly forbidden is the test documents from the evaluation tasks and data that cannot be released publicly. However, we additionally require that external data meets our own safety standards and may be excluded if it does not.
+                </p>
+                
+                    
+                
+            </p>
+          </div>
+          
+          <div>
+        <img align="right"  width="100%" src="../assets/images/svgs/book.svg">
+        </div>
+
+      </div>
+    </section>
+      
+      
+      <div align="center" style="padding-bottom:1rem;padding-top:14rem;">
+      <img width="80%" src="../assets/images/svgs/logo2.svg">
+      </div>
+      
+      
+
+    </main>
+    <!-- Main content body end  -->
+
+    <!-- Footer start  -->
+    <footer class="section" style="background-color: #47C3CD;">
+      <div class="footer2 container grid">
+
+      <!-- <p class="footer__copy">
+        &#169; Developed by Shahidul Alam. Designed by Bedimcode. (Inspired)
+      </p> -->
+    </footer>
+    <!-- Footer end  -->
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+
+    <!-- Javascript -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
