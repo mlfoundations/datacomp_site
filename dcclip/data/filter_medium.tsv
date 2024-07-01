@@ -16,6 +16,6 @@
 08-25-2023	SIEVE	0.303	0.354	24012387	Meta	https://arxiv.org/abs/2310.02110
 08-17-2023	T-MARS: Improving Visual Representations by Circumventing Text Feature Learning	0.330	0.361	25300000	CMU	
 09-08-2023	TMARS + SSFT	0.338	0.362	-	CMU	
-10-02-2023	Data Filtering Networks	0.371	0.373	-	DFN	https://arxiv.org/abs/2309.17425
+10-02-2023	Data Filtering Networks	0.371	0.373	-	DFN	https://arxiv.org/abs/2309.17425	
 06-21-2024	negCLIPLoss & NormSim + DFN + HYPE	0.382	0.388	-	UW	https://arxiv.org/abs/2405.19547	
 06-21-2024	negCLIPLoss & NormSim + DFN	0.375	0.386	-	UW	https://arxiv.org/abs/2405.19547	
