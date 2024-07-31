@@ -450,7 +450,6 @@
         }
 
         function populateTable(data, tableBody) {
-          const columnIndexForScientificNotation = 4; // Change this to the desired column index
 
           data.forEach((rowData, rowIndex) => {
             const row = document.createElement('tr');
@@ -465,10 +464,7 @@
               const cell = document.createElement('td');
 
               // Format the cell data for the specified column index
-              if (cellIndex === columnIndexForScientificNotation) {
-                const number = parseFloat(cellData);
-                cell.textContent = isNaN(number) ? cellData : number.toExponential(1);
-              } else if (cellIndex === 6 && cellData && cellData.trim() !== "") {
+              if (cellIndex === 6 && cellData && cellData.trim() !== "") {
                 const anchor = document.createElement('a');
                 anchor.href = cellData;
                 anchor.textContent = cellData;
