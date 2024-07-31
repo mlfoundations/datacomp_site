@@ -404,35 +404,34 @@
          <br>
          <script>
 
-          var tracks = ['filter', 'mixing'];
-          var scales = ['small', 'medium', 'large', 'xlarge', 'xxlarge'];
-          for (let track of tracks) {
-            for (let scale of scales) {
-              fetch('data/' + track + '_' + scale + '.tsv')
-              .then(function(response){
-                return response.text();
-              })
-              .then(function(data){
-                var table_id = track + '-track--' + scale + '-scale-tb';
-                var table_container = document.getElementById(table_id);
-                csv_string_to_table(data, table_container);
-                var table_id_for_datatable = '#' + table_id;
-                let table = new DataTable(table_id_for_datatable, {
-                  scrollX: true,
-                  searching: false,
-                  lengthChange: false,
-                  pageLength: 50,
-                });
+        var tracks = ['filter', 'mixing'];
+        var scales = ['small', 'medium', 'large', 'xlarge', 'xxlarge'];
+        for (let track of tracks) {
+          for (let scale of scales) {
+            fetch('data/' + track + '_' + scale + '.tsv')
+            .then(function(response){
+              return response.text();
+            })
+            .then(function(data){
+              var table_id = track + '-track--' + scale + '-scale-tb';
+              var table_container = document.getElementById(table_id);
+              csv_string_to_table(data, table_container);
+              var table_id_for_datatable = '#' + table_id;
+              let table = new DataTable(table_id_for_datatable, {
+                scrollX: true,
+                searching: false,
+                lengthChange: false,
+                pageLength: 50,
               });
-            }
+            });
           }
+        }
 
         function csv_string_to_table(csvData, tableBody) {
-            const table = tableBody.parentElement;
-            processData(csvData, table);
+          const table = tableBody.parentElement;
+          processData(csvData, table);
         }
-       
-       
+
         function processData(csvData, table) {
           const tableBody = table.querySelector('tbody');
           const rows = csvData.split('\n');
@@ -441,48 +440,49 @@
           // Sort the data array based on a particular value (column)
           const columnIndexToSortBy = 2; // Change this to the desired column index
           data.sort((a, b) => {
-              if (a[columnIndexToSortBy] === undefined || b[columnIndexToSortBy] === undefined) {
-                  return 0;
-              }
-              return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
+            if (a[columnIndexToSortBy] === undefined || b[columnIndexToSortBy] === undefined) {
+              return 0;
+            }
+            return b[columnIndexToSortBy].localeCompare(a[columnIndexToSortBy]); // Swap a and b for descending order
           });
 
-    populateTable(data, tableBody);
-}
+          populateTable(data, tableBody);
+        }
 
-function populateTable(data, tableBody) {
-    const columnIndexForScientificNotation = 4; // Change this to the desired column index
+        function populateTable(data, tableBody) {
+          const columnIndexForScientificNotation = 4; // Change this to the desired column index
 
-    data.forEach((rowData, rowIndex) => {
-        const row = document.createElement('tr');
+          data.forEach((rowData, rowIndex) => {
+            const row = document.createElement('tr');
 
-        // Add row number at the beginning of each row
-        const rowNumberCell = document.createElement('td');
-        rowNumberCell.textContent = rowIndex + 1;
-        row.appendChild(rowNumberCell);
+            // Add row number at the beginning of each row
+            const rowNumberCell = document.createElement('td');
+            const isExternal = rowData[1] && rowData[1].includes("External");
+            rowNumberCell.textContent = (rowIndex + 1) + (isExternal ? '*' : '');
+            row.appendChild(rowNumberCell);
 
-        rowData.forEach((cellData, cellIndex) => {
-            const cell = document.createElement('td');
+            rowData.forEach((cellData, cellIndex) => {
+              const cell = document.createElement('td');
 
-            // Format the cell data for the specified column index
-            if (cellIndex === columnIndexForScientificNotation) {
+              // Format the cell data for the specified column index
+              if (cellIndex === columnIndexForScientificNotation) {
                 const number = parseFloat(cellData);
                 cell.textContent = isNaN(number) ? cellData : number.toExponential(1);
-            } else if (cellIndex === 6 && cellData && cellData.trim() !== "") {
+              } else if (cellIndex === 6 && cellData && cellData.trim() !== "") {
                 const anchor = document.createElement('a');
                 anchor.href = cellData;
                 anchor.textContent = cellData;
                 cell.appendChild(anchor);
-            } else {
+              } else {
                 cell.textContent = cellData;
-            }
+              }
 
-            row.appendChild(cell);
-        });
+              row.appendChild(cell);
+            });
 
-        tableBody.appendChild(row);
-    });
-}
+            tableBody.appendChild(row);
+          });
+        }
 
             </script>
 

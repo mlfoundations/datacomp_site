@@ -1,2 +1,7 @@
-06-19-2024	Baseline: DCLM-Baseline	0.3020560852	0.1544538111	0.2380954019	DCLM team	https://arxiv.org/abs/2406.11794
-06-19-2024	Baseline: RW Reproduction	0.2753762094	0.1461640643	0.2465319367	DCLM team	https://arxiv.org/abs/2406.11794
+06-19-2024	Baseline: DCLM-Baseline	0.30206	0.15445	0.23810	DCLM team	https://arxiv.org/abs/2406.11794
+06-19-2024	Baseline: ReffinedWeb Reproduction	0.27538	0.14616	0.24653	DCLM team	https://arxiv.org/abs/2406.11794
+06-19-2024	External: Fineweb-Edu	0.26619	0.13507	0.26344	HuggingFace	https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1
+06-19-2024	External: RefinedWeb	0.25112	0.12864	0.23979	The Falcon LLM team	https://arxiv.org/abs/2306.01116
+06-19-2024	External: C4	0.23745	0.12541	0.25440	Google	https://arxiv.org/abs/1910.10683
+06-19-2024	External: RPJ	0.25697	0.13484	0.24337	Together AI	https://www.together.ai/blog/redpajama
+06-19-2024	External: Dolma v1	0.25753	0.13494	0.24290	AI2	https://arxiv.org/abs/2402.00159
