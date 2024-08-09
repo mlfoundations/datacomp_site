@@ -15,3 +15,4 @@
 09-07-2023	OCR and Naive english filtering	0.057	0.173	3450000	MA and RH	
 08-02-2023	CLIP score (L/14 30%) baseline	0.049	0.164	3400000	cvl	
 09-06-2023	BLIP2-COCO-finetuned_similarity_top-35%	0.053	0.177	12800000	LINE-CVL	
+08-05-2024	MoDO	0.051	0.173	-	DAM	https://huggingface.co/DamingW/Datacomp_MoDO_08051
