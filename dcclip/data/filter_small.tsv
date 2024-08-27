@@ -16,3 +16,4 @@
 08-02-2023	CLIP score (L/14 30%) baseline	0.049	0.164	3400000	cvl	
 09-06-2023	BLIP2-COCO-finetuned_similarity_top-35%	0.053	0.177	12800000	LINE-CVL	
 08-05-2024	MoDO	0.051	0.173	-	DAM	https://huggingface.co/DamingW/Datacomp_MoDO_08051
+08-18-2024	EcoDatum	0.053	0.182	-	EcoDatum	-
