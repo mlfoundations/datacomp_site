@@ -775,7 +775,7 @@ body.dark__theme {
     position: initial;
   }
   .home {
-    padding: 2rem 0 14rem;
+    padding: 2rem 0 8rem;
 		grid-template-columns: repeat(1, 1fr);
   }
 
