@@ -20,3 +20,4 @@
 06-21-2024	negCLIPLoss & NormSim + DFN + HYPE	0.382	0.388	-	UW	https://arxiv.org/abs/2405.19547
 06-21-2024	negCLIPLoss & NormSim + DFN	0.375	0.386	-	UW	https://arxiv.org/abs/2405.19547
 03-13-2025	M-FLYT + SCS (alpha=0.15)	0.401	0.377	-	TAU	https://arxiv.org/abs/2503.08805
+04-20-2025	Metagradient Descent	0.270	0.402	-	Engstrom et. al.	https://arxiv.org/abs/2503.13751

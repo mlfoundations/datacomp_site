@@ -18,3 +18,4 @@
 08-05-2024	MoDO	0.051	0.173	-	DAM	https://huggingface.co/DamingW/Datacomp_MoDO_08051
 08-18-2024	EcoDatum	0.053	0.182	3526136	EcoDatum	https://arxiv.org/abs/2502.08211
 03-14-2025	M-FLYT + SCS (alpha=0.5)	0.080	0.185	-	TAU	https://arxiv.org/abs/2503.08805
+04-20-2025	Metagradient Descent	0.0.041	0.0.214	-	Engstrom et. al.	https://arxiv.org/abs/2503.13751
